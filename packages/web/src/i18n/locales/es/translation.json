@@ -1,0 +1,675 @@
+{
+  "common": {
+    "dashboard": "Panel de Control",
+    "members": "Alumnos",
+    "schedule": "Horarios",
+    "portal": "Portal",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Agregar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "confirm": "Confirmar",
+    "close": "Cerrar",
+    "processing": "Procesando...",
+    "required": "requerido",
+    "uploading": "Subiendo...",
+    "uploadImage": "Subir Imagen",
+    "changeImage": "Cambiar Imagen",
+    "imageUploadHint": "Máx. 5MB, PNG o JPG",
+    "clearFilters": "Limpiar Filtros",
+    "today": "Hoy",
+    "months": {
+      "january": "Enero",
+      "february": "Febrero",
+      "march": "Marzo",
+      "april": "Abril",
+      "may": "Mayo",
+      "june": "Junio",
+      "july": "Julio",
+      "august": "Agosto",
+      "september": "Septiembre",
+      "october": "Octubre",
+      "november": "Noviembre",
+      "december": "Diciembre"
+    },
+    "days": {
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo"
+    },
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "members": {
+    "title": "Alumnos",
+    "addMember": "Registrar alumno",
+    "editMember": "Editar Alumno",
+    "addMemberDescription": "Completa el formulario para agregar un nuevo alumno",
+    "editMemberDescription": "Edita la información del alumno",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "plan": "Plan",
+    "joined": "Fecha de Ingreso",
+    "lastSeen": "Última Vez",
+    "tenant": "Sede",
+    "subscriptionExpiresAt": "Vencimiento",
+    "status": {
+      "active": "Al Día",
+      "inactive": "Inactivo",
+      "pastDue": "Vencida",
+      "expiringSoon": "Por Vencer"
+    },
+    "rank": {
+      "whiteBelt": "Blanco",
+      "blueBelt": "Azul",
+      "purpleBelt": "Morado",
+      "brownBelt": "Marrón",
+      "blackBelt": "Negro"
+    },
+    "memberType": {
+      "adult": "Adulto",
+      "kid": "Niño"
+    },
+    "form": {
+      "name": "Nombre Completo",
+      "namePlaceholder": "Ej: Juan Pérez",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "Ej: juan.perez@email.com",
+      "status": "Estado de Membresía",
+      "statusPlaceholder": "Selecciona el estado",
+      "rank": "Cinturón / Graduación",
+      "rankPlaceholder": "Selecciona el cinturón",
+      "stripes": "Grado",
+      "stripesPlaceholder": "Número de grados (0-4)",
+      "memberType": "Tipo de Alumno",
+      "memberTypePlaceholder": "Selecciona el tipo",
+      "plan": "Plan de Membresía",
+      "planPlaceholder": "Selecciona un plan",
+      "side": "Sede",
+      "sidePlaceholder": "Selecciona una sede",
+      "tenant": "Sede",
+      "tenantPlaceholder": "Selecciona una sede",
+      "joined": "Fecha de Ingreso",
+      "joinedPlaceholder": "Fecha en que se unió al gimnasio",
+      "temporaryPassword": "Contraseña Temporal",
+      "temporaryPasswordPlaceholder": "Contraseña temporal para el usuario"
+    },
+    "filters": {
+      "title": "Filtros",
+      "description": "Filtra los miembros según tus criterios",
+      "searchPlaceholder": "Buscar alumno...",
+      "status": "Estado",
+      "rank": "Cinturón",
+      "role": "Rol",
+      "tenant": "Sede",
+      "memberType": "Tipo de Alumno",
+      "allStatuses": "Todos los estados",
+      "allRanks": "Todos los cinturones",
+      "allRoles": "Todos los roles",
+      "allTenants": "Todas las sedes",
+      "allMemberTypes": "Todos los tipos"
+    },
+    "role": {
+      "alumno": "Alumno",
+      "instructor": "Instructor",
+      "admin": "Administrador",
+      "owner": "Propietario"
+    },
+    "table": {
+      "member": "Alumno",
+      "name": "Nombre",
+      "email": "Correo",
+      "rank": "Cinturón",
+      "belt": "Cinturón",
+      "memberType": "Tipo",
+      "membershipType": "Tipo de Membresía",
+      "status": "Estado",
+      "plan": "Plan",
+      "side": "Sede",
+      "tenant": "Sede",
+      "expiresAt": "Vencimiento",
+      "payment": "Pago",
+      "lastSeen": "Última vez",
+      "actions": "Acciones",
+      "noMembers": "No hay alumnos disponibles",
+      "membershipUpToDate": "Membresía al Día",
+      "monthlyPayment": "Pago Mensual",
+      "upToDate": "Al Día",
+      "overdue": "Vencida",
+      "paid": "Pagado",
+      "unpaid": "Pendiente"
+    },
+    "viewMode": {
+      "cards": "Tarjetas",
+      "table": "Tabla"
+    },
+    "actions": {
+      "viewProfile": "Ver Perfil",
+      "editDetails": "Editar Detalles",
+      "viewPayments": "Ver Pagos",
+      "deactivate": "Desactivar"
+    },
+    "profile": {
+      "title": "Perfil del Alumno",
+      "description": "Información detallada del alumno",
+      "digitalCard": "Carnet Digital",
+      "unlimited": "Ilimitado",
+      "progress": "Progreso",
+      "progressTo": "Camino a Cinturón {{rank}}",
+      "attendance": "Asistencia",
+      "classes": "Clases",
+      "current": "Actual",
+      "next": "Siguiente",
+      "memberInfo": "Información del Alumno",
+      "expiresAt": "Vence"
+    },
+    "messages": {
+      "createSuccess": "Alumno creado exitosamente",
+      "createError": "Error al crear el alumno",
+      "updateSuccess": "Alumno actualizado exitosamente",
+      "updateError": "Error al actualizar el alumno",
+      "deleteSuccess": "Alumno eliminado exitosamente",
+      "deleteError": "Error al eliminar el alumno",
+      "deleteConfirm": "¿Estás seguro de que deseas eliminar este alumno?",
+      "deleteDescription": "Esta acción no se puede deshacer. Se eliminará permanentemente el alumno {{name}}.",
+      "loadError": "Error al cargar los alumnos",
+      "paymentConfirmed": "Pago confirmado - Membresía activada",
+      "paymentUnconfirmed": "Pago no confirmado - Membresía marcada como vencida"
+    },
+    "payment": {
+      "pay": "Pagar",
+      "paid": "Pagado",
+      "confirmTitle": "Confirmar Pago",
+      "confirmDescription": "¿Confirmas el pago de la cuota de {{month}} para {{name}}? Esta acción actualizará el estado de la membresía a \"Activa\" y extenderá la fecha de vencimiento.",
+      "confirm": "Confirmar Pago",
+      "confirmed": "Pago confirmado para {{name}}",
+      "error": "Error al confirmar el pago"
+    }
+  },
+  "schedule": {
+    "title": "Horarios",
+    "addClass": "Agregar Clase",
+    "editClass": "Editar Clase",
+    "className": "Nombre de la Clase",
+    "type": "Tipo",
+    "instructor": "Instructor",
+    "startTime": "Hora de Inicio",
+    "endTime": "Hora de Fin",
+    "date": "Fecha",
+    "location": "Ubicación",
+    "capacity": "Capacidad",
+    "gi": "Gi",
+    "noGi": "No-Gi",
+    "kids": "Niños",
+    "management": {
+      "title": "Organización de Clases",
+      "subtitle": "Gestiona y organiza el horario de clases",
+      "newClass": "Nueva Clase",
+      "editClass": "Editar Clase",
+      "deleteClass": "Eliminar Clase",
+      "scheduledClasses": "Clases Programadas",
+      "scheduledClassesDescription": "Gestiona las clases programadas y sus horarios",
+      "schedules": "Horarios",
+      "schedulesDescription": "Configura los horarios de las clases",
+      "locations": "Ubicaciones",
+      "locationsDescription": "Administra las ubicaciones de las clases",
+      "instructors": "Instructores",
+      "instructorsDescription": "Asigna instructores a las clases",
+      "calendar": "Calendario",
+      "calendarDescription": "Visualiza todas las clases en el calendario",
+      "noClasses": "No hay clases programadas",
+      "noClassesDescription": "Comienza agregando tu primera clase",
+      "form": {
+        "name": "Nombre de la Clase",
+        "namePlaceholder": "Ej: Jiu-Jitsu Gi Principiantes",
+        "nameRequired": "El nombre de la clase es requerido",
+        "type": "Tipo de Clase",
+        "typePlaceholder": "Selecciona el tipo",
+        "typeRequired": "El tipo de clase es requerido",
+        "instructor": "Instructor",
+        "instructorPlaceholder": "Ej: Master Silva",
+        "instructorRequired": "El instructor es requerido",
+        "startTime": "Hora de Inicio",
+        "startTimePlaceholder": "HH:MM",
+        "startTimeRequired": "La hora de inicio es requerida",
+        "endTime": "Hora de Fin",
+        "endTimePlaceholder": "HH:MM",
+        "endTimeRequired": "La hora de fin es requerida",
+        "date": "Fecha",
+        "datePlaceholder": "Selecciona una fecha",
+        "dateRequired": "La fecha es requerida",
+        "location": "Ubicación",
+        "locationPlaceholder": "Ej: Sede Central - Tatami 1",
+        "locationRequired": "La ubicación es requerida",
+        "capacity": "Capacidad",
+        "capacityPlaceholder": "Ej: 20",
+        "capacityRequired": "La capacidad es requerida",
+        "capacityMin": "La capacidad debe ser al menos 1",
+        "isPrivate": "Clase Particular",
+        "isPrivateDescription": "Marca esta opción si es una clase particular del instructor",
+        "timeError": "La hora de fin debe ser posterior a la hora de inicio"
+      },
+      "messages": {
+        "createSuccess": "Clase creada exitosamente",
+        "createError": "Error al crear la clase",
+        "updateSuccess": "Clase actualizada exitosamente",
+        "updateError": "Error al actualizar la clase",
+        "deleteSuccess": "Clase eliminada exitosamente",
+        "deleteError": "Error al eliminar la clase",
+        "deleteConfirm": "¿Estás seguro de que deseas eliminar esta clase?",
+        "deleteDescription": "Esta acción no se puede deshacer. Se eliminará permanentemente la clase {{name}}.",
+        "loadError": "Error al cargar las clases",
+        "bulkCreateSuccess": "{{count}} clases creadas exitosamente",
+        "bulkCreateError": "Error al crear las clases masivamente"
+      },
+      "bulk": {
+        "title": "Crear Clases Masivamente",
+        "description": "Crea todas las clases del mes seleccionando los días y horario",
+        "createBulk": "Crear Clases del Mes",
+        "create": "Crear Clases",
+        "month": "Mes",
+        "year": "Año",
+        "days": "Días de la Semana",
+        "selectionMode": "Modo de Selección",
+        "presetMode": "Opciones Predefinidas",
+        "customMode": "Selección Personalizada",
+        "weekdays": "Días Laborables",
+        "weekdaysSaturday": "Días Laborables + Sábado",
+        "selectMonth": "Selecciona el mes",
+        "selectYear": "Selecciona el año",
+        "monthRequired": "El mes es requerido",
+        "yearRequired": "El año es requerido",
+        "daysRequired": "Debes seleccionar los días",
+        "namePlaceholder": "Ej: Clase de Jiu-Jitsu",
+        "nameHint": "Opcional: Si no se especifica, se usará 'Clase' como nombre por defecto",
+        "willCreate": "Se crearán {{count}} clases para el mes seleccionado"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Panel de Control",
+    "overview": "Resumen",
+    "members": "Alumnos",
+    "greeting": "Hola, {{name}} 👋",
+    "totalRevenue": {
+      "title": "Ingresos Totales",
+      "thisMonth": "este mes"
+    },
+    "activeMembers": {
+      "title": "Alumnos Activos",
+      "new": "nuevos"
+    },
+    "monthlyAttendance": {
+      "title": "Asistencia Mensual",
+      "vsPreviousMonth": "vs mes anterior",
+      "thisQuarter": "este trimestre"
+    },
+    "retention": {
+      "title": "Retención",
+      "thisQuarter": "este trimestre"
+    },
+    "attendance": {
+      "title": "Asistencia"
+    },
+    "upcomingClasses": {
+      "title": "Próximas Clases",
+      "description": "Agenda para hoy y mañana."
+    },
+    "recentPayments": {
+      "title": "Pagos Recientes",
+      "description": "Últimas renovaciones de membresía."
+    },
+    "atRiskMembers": {
+      "title": "Riesgo de Abandono",
+      "description": "Ausentes +14 días.",
+      "days": "días"
+    },
+    "membersTab": {
+      "title": "Alumnos",
+      "description": "Gestión de miembros por sede"
+    },
+    "selectSide": "Seleccionar sede",
+    "allSides": "Todas las sedes",
+    "loading": "Cargando estadísticas...",
+    "error": "Error al cargar las estadísticas"
+  },
+  "attendance": {
+    "checkIn": "Marcar Asistencia"
+  },
+  "registrations": {
+    "title": "Solicitudes de Registro",
+    "searchPlaceholder": "Buscar por email o nombre...",
+    "noResults": "No se encontraron solicitudes",
+    "loadError": "Error al cargar las solicitudes",
+    "confirm": "Confirmar",
+    "reject": "Rechazar",
+    "confirmSuccess": "Registro confirmado exitosamente",
+    "confirmError": "Error al confirmar el registro",
+    "rejectSuccess": "Registro rechazado exitosamente",
+    "rejectError": "Error al rechazar el registro",
+    "assignMembership": "Asignar Membresía",
+    "assignMembershipInfo": "Funcionalidad próximamente",
+    "pagination": "Página {{page}} de {{pages}}",
+    "status": {
+      "pending": "Pendiente",
+      "confirmed": "Confirmado",
+      "rejected": "Rechazado",
+      "all": "Todos"
+    },
+    "table": {
+      "name": "Nombre",
+      "email": "Email",
+      "rank": "Rango",
+      "status": "Estado",
+      "requestedAt": "Fecha Solicitud",
+      "actions": "Acciones"
+    },
+    "confirmDialog": {
+      "title": "Confirmar Registro",
+      "description": "¿Deseas confirmar el registro de {{email}}?",
+      "createMembership": "Crear membresía automáticamente",
+      "membershipName": "Nombre de la membresía",
+      "memberType": "Tipo de miembro",
+      "adult": "Adulto",
+      "kid": "Niño",
+      "plan": "Plan",
+      "monthly": "Mensual",
+      "quarterly": "Trimestral"
+    },
+    "rejectDialog": {
+      "title": "Rechazar Registro",
+      "description": "¿Estás seguro de que deseas rechazar el registro de {{email}}?",
+      "reason": "Motivo del rechazo (opcional)",
+      "reasonPlaceholder": "Ingresa el motivo del rechazo..."
+    }
+  },
+  "portal": {
+    "title": "Mi Membresía",
+    "subtitle": "Información sobre tu membresía y asistencia",
+    "error": {
+      "userNotFound": "No se pudo cargar la información del usuario."
+    },
+    "profile": {
+      "title": "Perfil del Alumno",
+      "welcome": "¡Bienvenido, {{name}}!",
+      "welcomeBack": "¡Bienvenido de nuevo, {{name}}!",
+      "studentId": "ID de Alumno",
+      "beltRank": "Cinturón",
+      "beltAndRank": "Faixa y Grados",
+      "startDate": "Fecha de Inicio",
+      "avatarUpdated": "Avatar actualizado exitosamente",
+      "avatarUpdateError": "Error al actualizar el avatar",
+      "updateSuccess": "Perfil actualizado exitosamente",
+      "updateError": "Error al actualizar el perfil",
+      "name": "Nombre",
+      "namePlaceholder": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+1234567890",
+      "editInfo": "Editar información"
+    },
+    "membership": {
+      "title": "Membresía",
+      "status": "Estado",
+      "type": "Tipo de Membresía",
+      "typeMonthly": "Mensual",
+      "typeQuarterly": "Trimestral",
+      "typeUnlimited": "Libre",
+      "typeClasses": "X Clases",
+      "typeNotSpecified": "No especificado",
+      "memberType": "Tipo de Miembro",
+      "adult": "Adulto",
+      "kid": "Niño",
+      "tenant": "Sede",
+      "startDate": "Fecha de Inicio",
+      "expirationDate": "Fecha de Vencimiento",
+      "canTrainToday": "¿Puedo entrenar hoy?",
+      "yes": "Sí",
+      "no": "No",
+      "error": "No se pudo cargar la información de la membresía.",
+      "incompleteData": {
+        "title": "Información incompleta",
+        "message": "Tu perfil está incompleto. Por favor, contacta a la administración para completar tu información de membresía.",
+        "contactAdmin": "Contactar administración"
+      }
+    },
+    "payments": {
+      "title": "Pagos",
+      "description": "Historial de pagos y próximos vencimientos",
+      "lastPayment": "Último Pago",
+      "date": "Fecha",
+      "amount": "Monto",
+      "plan": "Plan",
+      "nextExpiration": "Próximo Vencimiento",
+      "completed": "Completado",
+      "noPayments": "No hay pagos registrados",
+      "error": "Error al cargar los pagos"
+    },
+    "attendance": {
+      "title": "Asistencia",
+      "description": "Registro de clases asistidas",
+      "totalCheckIns": "Check-ins totales",
+      "totalClasses": "Clases totales",
+      "remainingClasses": "Clases restantes",
+      "noClassesRemaining": "No tienes clases restantes",
+      "checkIn": "Marcar Asistencia",
+      "checkInButton": "Marcar",
+      "checkInSuccess": "Asistencia marcada exitosamente",
+      "checkInSuccessOss": "¡Oss! Asistencia marcada exitosamente",
+      "checkInError": "Error al marcar asistencia",
+      "selectClass": "Seleccionar Clase",
+      "selectClassDescription": "Selecciona la clase a la que asististe hoy",
+      "noClassesToday": "No hay clases disponibles hoy",
+      "checkedIn": "Marcado"
+    },
+    "session": {
+      "logout": "Cerrar Sesión"
+    }
+  },
+  "layout": {
+    "appName": "Pantera Negra",
+    "sections": {
+      "management": "Gestión",
+      "business": "Negocio",
+      "student": "Alumno"
+    },
+    "navigation": {
+      "dashboard": "Panel General",
+      "members": "Alumnos",
+      "registrations": "Solicitudes de Registro",
+      "schedule": "Calendario",
+      "scheduleManagement": "Organización de Clases",
+      "financials": "Finanzas",
+      "studentPortal": "Portal Alumno"
+    },
+    "user": {
+      "name": "Master Silva",
+      "role": "Admin"
+    },
+    "defaultTitle": "Dashboard",
+    "welcome": "Potencia tu Jiu-Jitsu",
+    "copyright": "© 2025 — Pantera Negra",
+    "footer": {
+      "revisionPolicy": "Política de Revisiones",
+      "termsAndConditions": "Términos y Condiciones"
+    },
+    "loginPage": {
+      "images": {
+        "team": {
+          "title": "Equipo",
+          "subtitle": "Comunidad unida en el tatami."
+        },
+        "training": {
+          "title": "Entrenamiento",
+          "subtitle": "Técnica y dedicación diaria."
+        },
+        "passion": {
+          "title": "Pasión",
+          "subtitle": "El arte suave en acción."
+        },
+        "excellence": {
+          "title": "Excelencia",
+          "subtitle": "Comprometidos con la excelencia."
+        }
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenido",
+      "subtitle": "Inicia sesión para acceder al dashboard",
+      "description": "Ingresa tus credenciales para acceder",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Iniciar Sesión",
+      "submitting": "Iniciando sesión...",
+      "googleLogin": "Google",
+      "continueWith": "O continúa con",
+      "continueWithGoogle": "Continuar con Google",
+      "connecting": "Conectando...",
+      "orContinueWith": "O continúa con",
+      "demoNote": "Demo: Usa cualquier email. Contraseña: cualquier valor",
+      "showPassword": "Mostrar contraseña",
+      "hidePassword": "Ocultar contraseña",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "noAccount": "¿No tienes una cuenta?",
+      "registerLink": "Regístrate",
+      "errors": {
+        "emailRequired": "El email es requerido",
+        "passwordRequired": "La contraseña es requerida",
+        "required": "Por favor completa todos los campos",
+        "invalidEmail": "Por favor ingresa un email válido",
+        "loginFailed": "Error al iniciar sesión",
+        "networkError": "Error de conexión. Por favor intenta de nuevo"
+      },
+      "success": "Sesión iniciada correctamente"
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "subtitle": "Regístrate para comenzar",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPasswordPlaceholder": "Repite tu contraseña",
+      "tenant": "Sede",
+      "tenantPlaceholder": "Selecciona una sede",
+      "submit": "Registrarse",
+      "submitting": "Registrando...",
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "loginLink": "Inicia sesión",
+      "backToLogin": "Volver al inicio de sesión",
+      "errors": {
+        "emailRequired": "El email es requerido",
+        "passwordRequired": "La contraseña es requerida",
+        "passwordMinLength": "La contraseña debe tener al menos 8 caracteres",
+        "confirmPasswordRequired": "La confirmación de contraseña es requerida",
+        "passwordsDoNotMatch": "Las contraseñas no coinciden",
+        "invalidEmail": "Por favor ingresa un email válido",
+        "tenantRequired": "Debes seleccionar una sede",
+        "registerFailed": "Error al registrar"
+      },
+      "success": "Registro exitoso"
+    },
+    "forgotPassword": {
+      "title": "Restablecer contraseña",
+      "subtitle": "Ingresa tu email para recibir un enlace de restablecimiento",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "submit": "Enviar enlace",
+      "submitting": "Enviando...",
+      "cancel": "Cancelar",
+      "success": "Si existe una cuenta con ese email, se ha enviado un enlace de restablecimiento.",
+      "errors": {
+        "emailRequired": "El email es requerido",
+        "invalidEmail": "Por favor ingresa un email válido",
+        "failed": "Error al solicitar restablecimiento"
+      }
+    },
+    "resetPassword": {
+      "title": "Restablecer contraseña",
+      "subtitle": "Ingresa tu nueva contraseña",
+      "password": "Nueva contraseña",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "confirmPassword": "Confirmar nueva contraseña",
+      "confirmPasswordPlaceholder": "Repite tu nueva contraseña",
+      "submit": "Restablecer contraseña",
+      "submitting": "Restableciendo...",
+      "backToLogin": "Volver al inicio de sesión",
+      "success": "Contraseña restablecida exitosamente",
+      "errors": {
+        "passwordRequired": "La contraseña es requerida",
+        "passwordMinLength": "La contraseña debe tener al menos 8 caracteres",
+        "confirmPasswordRequired": "La confirmación de contraseña es requerida",
+        "passwordsDoNotMatch": "Las contraseñas no coinciden",
+        "failed": "Error al restablecer contraseña",
+        "invalidToken": "Token inválido o expirado"
+      }
+    },
+    "logout": {
+      "title": "Cerrar Sesión",
+      "success": "Sesión cerrada correctamente",
+      "errors": {
+        "logoutFailed": "Error al cerrar sesión"
+      }
+    },
+    "selectTenant": {
+      "title": "Selecciona tu sede",
+      "subtitle": "Elige la sede donde te registrarás",
+      "tenant": "Sede",
+      "tenantPlaceholder": "Selecciona una sede",
+      "submit": "Continuar",
+      "submitting": "Completando registro...",
+      "success": "Registro completado exitosamente",
+      "errors": {
+        "tenantRequired": "Debes seleccionar una sede",
+        "noToken": "Token no válido"
+      }
+    },
+    "oauth": {
+      "error": "Error en la autenticación",
+      "processing": "Procesando autenticación...",
+      "noToken": "No se recibió el token de autenticación",
+      "noCode": "No se recibió el código de autorización",
+      "noTenant": "No se pudo determinar el tenant"
+    }
+  },
+  "userMenu": {
+    "profile": "Mi Perfil",
+    "settings": "Configuración",
+    "admin": "Panel de Administración"
+  },
+  "passwordGenerator": {
+    "placeholder": "La contraseña generada aparecerá aquí",
+    "generate": "Generar contraseña",
+    "copy": "Copiar contraseña",
+    "copied": "Contraseña copiada al portapapeles",
+    "copyError": "Error al copiar la contraseña",
+    "noOptions": "Por favor selecciona al menos un tipo de carácter"
+  },
+  "notifications": {
+    "activating": "Activando notificaciones...",
+    "activationMessage": "Te notificaremos cuando tu cuenta esté completamente activada. Por favor, acepta los permisos cuando tu navegador lo solicite.",
+    "activated": "¡Notificaciones activadas!",
+    "activatedMessage": "Recibirás notificaciones cuando tu cuenta esté completamente activada y sobre eventos importantes.",
+    "enable": "Activar notificaciones",
+    "disable": "Desactivar notificaciones",
+    "permissionDenied": "Permisos de notificación denegados"
+  }
+}
+

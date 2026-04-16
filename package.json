@@ -1,0 +1,36 @@
+{
+  "name": "pantera-negra-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for Pantera Negra web application - Frontend (Vite + React) + Backend (Node.js + Express)",
+  "scripts": {
+    "dev": "pnpm --filter shared build && pnpm --filter web dev & pnpm --filter api dev",
+    "dev:web": "pnpm --filter shared build && pnpm --filter web dev",
+    "dev:api": "pnpm --filter shared build && pnpm --filter api dev",
+    "build": "pnpm --filter shared build && pnpm --filter api build && pnpm --filter web build",
+    "build:web": "pnpm --filter shared build && pnpm --filter web build",
+    "build:api": "pnpm --filter shared build && pnpm --filter api build",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r clean && rm -rf node_modules",
+    "test": "pnpm -r test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "bump:version": "node scripts/bump-version.js",
+    "docker:build": "docker build -t pantera-negra-app .",
+    "docker:build:local": "docker build --platform linux/amd64 -t pantera-negra-app .",
+    "docker:run": "docker run -p 8080:8080 --env-file .env pantera-negra-app",
+    "fly:deploy": "flyctl deploy",
+    "fly:deploy:local": "docker build --platform linux/amd64 -t pantera-negra-app . && flyctl deploy --local-only"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "prettier": "^3.3.3",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.6.12"
+}

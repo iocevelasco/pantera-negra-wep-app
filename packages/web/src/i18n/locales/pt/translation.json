@@ -1,0 +1,666 @@
+{
+  "common": {
+    "dashboard": "Painel de Controle",
+    "members": "Alunos",
+    "schedule": "Horários",
+    "portal": "Portal",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "add": "Adicionar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "confirm": "Confirmar",
+    "close": "Fechar",
+    "processing": "Processando...",
+    "required": "obrigatório",
+    "uploading": "Enviando...",
+    "uploadImage": "Enviar Imagem",
+    "changeImage": "Alterar Imagem",
+    "imageUploadHint": "Máx. 5MB, PNG ou JPG",
+    "clearFilters": "Limpar Filtros",
+    "today": "Hoje",
+    "months": {
+      "january": "Janeiro",
+      "february": "Fevereiro",
+      "march": "Março",
+      "april": "Abril",
+      "may": "Maio",
+      "june": "Junho",
+      "july": "Julho",
+      "august": "Agosto",
+      "september": "Setembro",
+      "october": "Outubro",
+      "november": "Novembro",
+      "december": "Dezembro"
+    },
+    "days": {
+      "monday": "Segunda-feira",
+      "tuesday": "Terça-feira",
+      "wednesday": "Quarta-feira",
+      "thursday": "Quinta-feira",
+      "friday": "Sexta-feira",
+      "saturday": "Sábado",
+      "sunday": "Domingo"
+    },
+    "previous": "Anterior",
+    "next": "Próximo"
+  },
+  "members": {
+    "title": "Alunos",
+    "addMember": "Registrar aluno",
+    "editMember": "Editar Aluno",
+    "addMemberDescription": "Preencha o formulário para adicionar um novo aluno",
+    "editMemberDescription": "Edite as informações do aluno",
+    "name": "Nome",
+    "email": "E-mail",
+    "plan": "Plano",
+    "joined": "Data de Entrada",
+    "lastSeen": "Última Vez",
+    "tenant": "Sede",
+    "subscriptionExpiresAt": "Data de Vencimento",
+    "status": {
+      "active": "Em Dia",
+      "inactive": "Inativo",
+      "pastDue": "Vencido",
+      "expiringSoon": "Por Vencer"
+    },
+    "rank": {
+      "whiteBelt": "Faixa Branca",
+      "blueBelt": "Faixa Azul",
+      "purpleBelt": "Faixa Roxa",
+      "brownBelt": "Faixa Marrom",
+      "blackBelt": "Faixa Preta"
+    },
+    "memberType": {
+      "adult": "Adulto",
+      "kid": "Criança"
+    },
+    "form": {
+      "name": "Nome Completo",
+      "namePlaceholder": "Ex: João Silva",
+      "email": "E-mail",
+      "emailPlaceholder": "Ex: joao.silva@email.com",
+      "status": "Status da Assinatura",
+      "statusPlaceholder": "Selecione o status",
+      "rank": "Faixa / Graduação",
+      "rankPlaceholder": "Selecione a faixa",
+      "stripes": "Grau",
+      "stripesPlaceholder": "Número de graus (0-4)",
+      "memberType": "Tipo de Aluno",
+      "memberTypePlaceholder": "Selecione o tipo",
+      "plan": "Plano de Assinatura",
+      "planPlaceholder": "Selecione um plano",
+      "side": "Sede",
+      "sidePlaceholder": "Selecione uma sede (obrigatório)",
+      "joined": "Data de Entrada",
+      "joinedPlaceholder": "Data em que se juntou à academia",
+      "temporaryPassword": "Senha Temporária",
+      "temporaryPasswordPlaceholder": "Senha temporária para o usuário"
+    },
+    "filters": {
+      "title": "Filtros",
+      "description": "Filtre os membros de acordo com seus critérios",
+      "searchPlaceholder": "Buscar aluno...",
+      "status": "Status",
+      "rank": "Faixa",
+      "role": "Função",
+      "tenant": "Sede",
+      "memberType": "Tipo de Aluno",
+      "allStatuses": "Todos os status",
+      "allRanks": "Todas as faixas",
+      "allRoles": "Todas as funções",
+      "allTenants": "Todas as sedes",
+      "allMemberTypes": "Todos os tipos"
+    },
+    "role": {
+      "alumno": "Aluno",
+      "instructor": "Instrutor",
+      "admin": "Administrador",
+      "owner": "Proprietário"
+    },
+    "table": {
+      "member": "Aluno",
+      "name": "Nome",
+      "email": "Email",
+      "rank": "Faixa",
+      "belt": "Faixa",
+      "memberType": "Tipo",
+      "membershipType": "Tipo de Assinatura",
+      "status": "Status",
+      "plan": "Plano",
+      "side": "Sede",
+      "tenant": "Sede",
+      "expiresAt": "Vencimento",
+      "payment": "Pagamento",
+      "lastSeen": "Última vez",
+      "actions": "Ações",
+      "noMembers": "Nenhum aluno disponível",
+      "membershipUpToDate": "Assinatura em Dia",
+      "monthlyPayment": "Pagamento Mensal",
+      "upToDate": "Em Dia",
+      "overdue": "Vencida",
+      "paid": "Pago",
+      "unpaid": "Pendente"
+    },
+    "viewMode": {
+      "cards": "Cartões",
+      "table": "Tabela"
+    },
+    "actions": {
+      "viewProfile": "Ver Perfil",
+      "editDetails": "Editar Detalhes",
+      "viewPayments": "Ver Pagamentos",
+      "deactivate": "Desativar"
+    },
+    "profile": {
+      "title": "Perfil do Aluno",
+      "description": "Informações detalhadas do aluno",
+      "digitalCard": "Carteira Digital",
+      "unlimited": "Ilimitado",
+      "progress": "Progresso",
+      "progressTo": "Caminho para Faixa {{rank}}",
+      "attendance": "Frequência",
+      "classes": "Aulas",
+      "current": "Atual",
+      "next": "Próximo",
+      "memberInfo": "Informações do Aluno",
+      "expiresAt": "Vence"
+    },
+    "messages": {
+      "createSuccess": "Aluno criado com sucesso",
+      "createError": "Erro ao criar aluno",
+      "updateSuccess": "Aluno atualizado com sucesso",
+      "updateError": "Erro ao atualizar aluno",
+      "deleteSuccess": "Aluno excluído com sucesso",
+      "deleteError": "Erro ao excluir aluno",
+      "deleteConfirm": "Tem certeza de que deseja excluir este aluno?",
+      "deleteDescription": "Esta ação não pode ser desfeita. O aluno {{name}} será excluído permanentemente.",
+      "loadError": "Erro ao carregar alunos",
+      "paymentConfirmed": "Pagamento confirmado - Assinatura ativada",
+      "paymentUnconfirmed": "Pagamento não confirmado - Assinatura marcada como vencida"
+    },
+    "payment": {
+      "pay": "Pagar",
+      "paid": "Pago",
+      "confirmTitle": "Confirmar Pagamento",
+      "confirmDescription": "Confirma o pagamento da mensalidade de {{month}} para {{name}}? Esta ação atualizará o status da assinatura para \"Ativa\" e estenderá a data de vencimento.",
+      "confirm": "Confirmar Pagamento",
+      "confirmed": "Pagamento confirmado para {{name}}",
+      "error": "Erro ao confirmar o pagamento"
+    }
+  },
+  "schedule": {
+    "title": "Horários",
+    "addClass": "Adicionar Aula",
+    "editClass": "Editar Aula",
+    "className": "Nome da Aula",
+    "type": "Tipo",
+    "instructor": "Instrutor",
+    "startTime": "Hora de Início",
+    "endTime": "Hora de Término",
+    "date": "Data",
+    "location": "Localização",
+    "capacity": "Capacidade",
+    "gi": "Gi",
+    "noGi": "No-Gi",
+    "kids": "Crianças",
+    "management": {
+      "title": "Organização de Aulas",
+      "subtitle": "Gerencie e organize o horário das aulas",
+      "newClass": "Nova Aula",
+      "editClass": "Editar Aula",
+      "deleteClass": "Excluir Aula",
+      "scheduledClasses": "Aulas Programadas",
+      "scheduledClassesDescription": "Gerencie as aulas programadas e seus horários",
+      "schedules": "Horários",
+      "schedulesDescription": "Configure os horários das aulas",
+      "locations": "Localizações",
+      "locationsDescription": "Gerencie as localizações das aulas",
+      "instructors": "Instrutores",
+      "instructorsDescription": "Atribua instrutores às aulas",
+      "calendar": "Calendário",
+      "calendarDescription": "Visualize todas as aulas no calendário",
+      "noClasses": "Não há aulas programadas",
+      "noClassesDescription": "Comece adicionando sua primeira aula",
+      "form": {
+        "name": "Nome da Aula",
+        "namePlaceholder": "Ex: Jiu-Jitsu Gi Iniciantes",
+        "nameRequired": "O nome da aula é obrigatório",
+        "type": "Tipo de Aula",
+        "typePlaceholder": "Selecione o tipo",
+        "typeRequired": "O tipo de aula é obrigatório",
+        "instructor": "Instrutor",
+        "instructorPlaceholder": "Ex: Master Silva",
+        "instructorRequired": "O instrutor é obrigatório",
+        "startTime": "Hora de Início",
+        "startTimePlaceholder": "HH:MM",
+        "startTimeRequired": "A hora de início é obrigatória",
+        "endTime": "Hora de Término",
+        "endTimePlaceholder": "HH:MM",
+        "endTimeRequired": "A hora de término é obrigatória",
+        "date": "Data",
+        "datePlaceholder": "Selecione uma data",
+        "dateRequired": "A data é obrigatória",
+        "location": "Localização",
+        "locationPlaceholder": "Ex: Sede Central - Tatame 1",
+        "locationRequired": "A localização é obrigatória",
+        "capacity": "Capacidade",
+        "capacityPlaceholder": "Ex: 20",
+        "capacityRequired": "A capacidade é obrigatória",
+        "capacityMin": "A capacidade deve ser pelo menos 1",
+        "isPrivate": "Aula Particular",
+        "isPrivateDescription": "Marque esta opção se for uma aula particular do instrutor",
+        "timeError": "A hora de término deve ser posterior à hora de início"
+      },
+      "messages": {
+        "createSuccess": "Aula criada com sucesso",
+        "createError": "Erro ao criar aula",
+        "updateSuccess": "Aula atualizada com sucesso",
+        "updateError": "Erro ao atualizar aula",
+        "deleteSuccess": "Aula excluída com sucesso",
+        "deleteError": "Erro ao excluir aula",
+        "deleteConfirm": "Tem certeza de que deseja excluir esta aula?",
+        "deleteDescription": "Esta ação não pode ser desfeita. A aula {{name}} será excluída permanentemente.",
+        "loadError": "Erro ao carregar as aulas",
+        "bulkCreateSuccess": "{{count}} aulas criadas com sucesso",
+        "bulkCreateError": "Erro ao criar as aulas em massa"
+      },
+      "bulk": {
+        "title": "Criar Aulas em Massa",
+        "description": "Crie todas as aulas do mês selecionando os dias e horário",
+        "createBulk": "Criar Aulas do Mês",
+        "create": "Criar Aulas",
+        "month": "Mês",
+        "year": "Ano",
+        "days": "Dias da Semana",
+        "selectionMode": "Modo de Seleção",
+        "presetMode": "Opções Pré-definidas",
+        "customMode": "Seleção Personalizada",
+        "weekdays": "Dias Úteis",
+        "weekdaysSaturday": "Dias Úteis + Sábado",
+        "selectMonth": "Selecione o mês",
+        "selectYear": "Selecione o ano",
+        "monthRequired": "O mês é obrigatório",
+        "yearRequired": "O ano é obrigatório",
+        "daysRequired": "Você deve selecionar os dias",
+        "namePlaceholder": "Ex: Aula de Jiu-Jitsu",
+        "nameHint": "Opcional: Se não especificado, será usado 'Aula' como nome padrão",
+        "willCreate": "{{count}} aulas serão criadas para o mês selecionado"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Painel de Controle",
+    "overview": "Visão Geral",
+    "members": "Alunos",
+    "greeting": "Olá, {{name}} 👋",
+    "totalRevenue": {
+      "title": "Receita Total",
+      "thisMonth": "este mês"
+    },
+    "activeMembers": {
+      "title": "Alunos Ativos",
+      "new": "novos"
+    },
+    "monthlyAttendance": {
+      "title": "Frequência Mensal",
+      "vsPreviousMonth": "vs mês anterior",
+      "thisQuarter": "este trimestre"
+    },
+    "retention": {
+      "title": "Retenção",
+      "thisQuarter": "este trimestre"
+    },
+    "attendance": {
+      "title": "Frequência"
+    },
+    "upcomingClasses": {
+      "title": "Próximas Aulas",
+      "description": "Agenda para hoje e amanhã."
+    },
+    "recentPayments": {
+      "title": "Pagamentos Recentes",
+      "description": "Últimas renovações de assinatura."
+    },
+    "atRiskMembers": {
+      "title": "Risco de Abandono",
+      "description": "Ausentes +14 dias.",
+      "days": "dias"
+    },
+    "membersTab": {
+      "title": "Alunos",
+      "description": "Gestão de alunos por sede"
+    },
+    "selectSide": "Selecionar sede",
+    "allSides": "Todas as sedes",
+    "loading": "Carregando estatísticas...",
+    "error": "Erro ao carregar estatísticas"
+  },
+  "attendance": {
+    "checkIn": "Marcar Frequência"
+  },
+  "registrations": {
+    "title": "Solicitações de Registro",
+    "searchPlaceholder": "Buscar por e-mail ou nome...",
+    "noResults": "Nenhuma solicitação encontrada",
+    "loadError": "Erro ao carregar as solicitações",
+    "confirm": "Confirmar",
+    "reject": "Rejeitar",
+    "confirmSuccess": "Registro confirmado com sucesso",
+    "confirmError": "Erro ao confirmar o registro",
+    "rejectSuccess": "Registro rejeitado com sucesso",
+    "rejectError": "Erro ao rejeitar o registro",
+    "assignMembership": "Atribuir Assinatura",
+    "assignMembershipInfo": "Funcionalidade em breve",
+    "pagination": "Página {{page}} de {{pages}}",
+    "status": {
+      "pending": "Pendente",
+      "confirmed": "Confirmado",
+      "rejected": "Rejeitado",
+      "all": "Todos"
+    },
+    "table": {
+      "name": "Nome",
+      "email": "E-mail",
+      "rank": "Faixa",
+      "status": "Status",
+      "requestedAt": "Data da Solicitação",
+      "actions": "Ações"
+    },
+    "confirmDialog": {
+      "title": "Confirmar Registro",
+      "description": "Deseja confirmar o registro de {{email}}?",
+      "createMembership": "Criar assinatura automaticamente",
+      "membershipName": "Nome da assinatura",
+      "memberType": "Tipo de membro",
+      "adult": "Adulto",
+      "kid": "Criança",
+      "plan": "Plano",
+      "monthly": "Mensal",
+      "quarterly": "Trimestral"
+    },
+    "rejectDialog": {
+      "title": "Rejeitar Registro",
+      "description": "Tem certeza de que deseja rejeitar o registro de {{email}}?",
+      "reason": "Motivo da rejeição (opcional)",
+      "reasonPlaceholder": "Digite o motivo da rejeição..."
+    }
+  },
+  "portal": {
+    "title": "Minha Assinatura",
+    "subtitle": "Informações sobre sua assinatura e frequência",
+    "error": {
+      "userNotFound": "Não foi possível carregar as informações do usuário."
+    },
+    "profile": {
+      "title": "Perfil do Aluno",
+      "welcome": "Bem-vindo, {{name}}!",
+      "welcomeBack": "Bem-vindo de volta, {{name}}!",
+      "studentId": "ID do Aluno",
+      "beltRank": "Faixa",
+      "beltAndRank": "Faixa e Graus",
+      "startDate": "Data de Início",
+      "avatarUpdated": "Avatar atualizado com sucesso",
+      "avatarUpdateError": "Erro ao atualizar o avatar",
+      "updateSuccess": "Perfil atualizado com sucesso",
+      "updateError": "Erro ao atualizar o perfil"
+    },
+    "membership": {
+      "title": "Assinatura",
+      "status": "Status",
+      "type": "Tipo de Assinatura",
+      "typeMonthly": "Mensal",
+      "typeQuarterly": "Trimestral",
+      "typeUnlimited": "Ilimitada",
+      "typeClasses": "X Aulas",
+      "typeNotSpecified": "Não especificado",
+      "memberType": "Tipo de Membro",
+      "adult": "Adulto",
+      "kid": "Criança",
+      "startDate": "Data de Início",
+      "expirationDate": "Data de Vencimento",
+      "canTrainToday": "Posso treinar hoje?",
+      "yes": "Sim",
+      "no": "Não",
+      "error": "Não foi possível carregar as informações da assinatura.",
+      "incompleteData": {
+        "title": "Informação incompleta",
+        "message": "Seu perfil está incompleto. Por favor, entre em contato com a administração para completar suas informações de assinatura.",
+        "contactAdmin": "Contatar administração"
+      }
+    },
+    "payments": {
+      "title": "Pagamentos",
+      "description": "Histórico de pagamentos e próximos vencimentos",
+      "lastPayment": "Último Pagamento",
+      "date": "Data",
+      "amount": "Valor",
+      "plan": "Plano",
+      "nextExpiration": "Próximo Vencimento",
+      "completed": "Concluído",
+      "noPayments": "Nenhum pagamento registrado",
+      "error": "Erro ao carregar os pagamentos"
+    },
+    "attendance": {
+      "title": "Frequência",
+      "description": "Registro de aulas frequentadas",
+      "totalCheckIns": "Check-ins totais",
+      "totalClasses": "Aulas totais",
+      "remainingClasses": "Aulas restantes",
+      "noClassesRemaining": "Você não tem aulas restantes",
+      "checkIn": "Marcar Frequência",
+      "checkInButton": "Marcar",
+      "checkInSuccess": "Frequência marcada com sucesso",
+      "checkInSuccessOss": "Oss! Frequência marcada com sucesso",
+      "checkInError": "Erro ao marcar frequência",
+      "selectClass": "Selecionar Aula",
+      "selectClassDescription": "Selecione a aula que você frequentou hoje",
+      "noClassesToday": "Não há aulas disponíveis hoje",
+      "checkedIn": "Marcado"
+    },
+    "session": {
+      "logout": "Sair"
+    }
+  },
+  "layout": {
+    "appName": "Pantera Negra",
+    "sections": {
+      "management": "Gestão",
+      "business": "Negócio",
+      "student": "Aluno"
+    },
+    "navigation": {
+      "dashboard": "Painel Geral",
+      "members": "Alunos",
+      "registrations": "Solicitações de Registro",
+      "schedule": "Calendário",
+      "scheduleManagement": "Organização de Aulas",
+      "financials": "Finanças",
+      "studentPortal": "Portal do Aluno"
+    },
+    "user": {
+      "name": "Master Silva",
+      "role": "Admin"
+    },
+    "defaultTitle": "Painel",
+    "welcome": "Potencie seu Jiu-Jitsu",
+    "copyright": "© 2025 — Pantera Negra",
+    "footer": {
+      "revisionPolicy": "Política de Revisões",
+      "termsAndConditions": "Termos e Condições"
+    },
+    "loginPage": {
+      "images": {
+        "team": {
+          "title": "Equipe",
+          "subtitle": "Comunidade unida no tatame."
+        },
+        "training": {
+          "title": "Treinamento",
+          "subtitle": "Técnica e dedicação diária."
+        },
+        "passion": {
+          "title": "Paixão",
+          "subtitle": "A arte suave em ação."
+        },
+        "excellence": {
+          "title": "Excelência",
+          "subtitle": "Comprometidos com a excelência."
+        }
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Bem-vindo",
+      "subtitle": "Faça login para acessar o painel",
+      "description": "Digite suas credenciais para acessar",
+      "email": "E-mail",
+      "emailPlaceholder": "seu@email.com",
+      "password": "Senha",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Entrar",
+      "submitting": "Entrando...",
+      "googleLogin": "Google",
+      "continueWith": "Ou continue com",
+      "continueWithGoogle": "Continuar com Google",
+      "connecting": "Conectando...",
+      "orContinueWith": "Ou continue com",
+      "demoNote": "Demo: Use qualquer e-mail. Senha: qualquer valor",
+      "showPassword": "Mostrar senha",
+      "hidePassword": "Ocultar senha",
+      "forgotPassword": "Esqueceu sua senha?",
+      "noAccount": "Não tem uma conta?",
+      "registerLink": "Registre-se",
+      "errors": {
+        "emailRequired": "O e-mail é obrigatório",
+        "passwordRequired": "A senha é obrigatória",
+        "required": "Por favor, preencha todos os campos",
+        "invalidEmail": "Por favor, insira um e-mail válido",
+        "loginFailed": "Erro ao fazer login",
+        "networkError": "Erro de conexão. Por favor, tente novamente"
+      },
+      "success": "Login realizado com sucesso"
+    },
+    "register": {
+      "title": "Criar conta",
+      "subtitle": "Registre-se para começar",
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "email": "E-mail",
+      "emailPlaceholder": "seu@email.com",
+      "password": "Senha",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "confirmPassword": "Confirmar senha",
+      "confirmPasswordPlaceholder": "Repita sua senha",
+      "tenant": "Sede",
+      "tenantPlaceholder": "Selecione uma sede",
+      "submit": "Registrar-se",
+      "submitting": "Registrando...",
+      "alreadyHaveAccount": "Já tem uma conta?",
+      "loginLink": "Faça login",
+      "backToLogin": "Voltar ao login",
+      "errors": {
+        "emailRequired": "O e-mail é obrigatório",
+        "passwordRequired": "A senha é obrigatória",
+        "passwordMinLength": "A senha deve ter pelo menos 8 caracteres",
+        "confirmPasswordRequired": "A confirmação de senha é obrigatória",
+        "passwordsDoNotMatch": "As senhas não coincidem",
+        "invalidEmail": "Por favor, insira um e-mail válido",
+        "tenantRequired": "Você deve selecionar uma sede",
+        "registerFailed": "Erro ao registrar"
+      },
+      "success": "Registro realizado com sucesso"
+    },
+    "forgotPassword": {
+      "title": "Redefinir senha",
+      "subtitle": "Digite seu e-mail para receber um link de redefinição",
+      "email": "E-mail",
+      "emailPlaceholder": "seu@email.com",
+      "submit": "Enviar link",
+      "submitting": "Enviando...",
+      "cancel": "Cancelar",
+      "success": "Se existir uma conta com esse e-mail, um link de redefinição foi enviado.",
+      "errors": {
+        "emailRequired": "O e-mail é obrigatório",
+        "invalidEmail": "Por favor, insira um e-mail válido",
+        "failed": "Erro ao solicitar redefinição"
+      }
+    },
+    "resetPassword": {
+      "title": "Redefinir senha",
+      "subtitle": "Digite sua nova senha",
+      "password": "Nova senha",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "confirmPassword": "Confirmar nova senha",
+      "confirmPasswordPlaceholder": "Repita sua nova senha",
+      "submit": "Redefinir senha",
+      "submitting": "Redefinindo...",
+      "backToLogin": "Voltar ao login",
+      "success": "Senha redefinida com sucesso",
+      "errors": {
+        "passwordRequired": "A senha é obrigatória",
+        "passwordMinLength": "A senha deve ter pelo menos 8 caracteres",
+        "confirmPasswordRequired": "A confirmação de senha é obrigatória",
+        "passwordsDoNotMatch": "As senhas não coincidem",
+        "failed": "Erro ao redefinir senha",
+        "invalidToken": "Token inválido ou expirado"
+      }
+    },
+    "logout": {
+      "title": "Sair",
+      "success": "Logout realizado com sucesso",
+      "errors": {
+        "logoutFailed": "Erro ao encerrar sessão"
+      }
+    },
+    "selectTenant": {
+      "title": "Selecione sua sede",
+      "subtitle": "Escolha a sede onde você se registrará",
+      "tenant": "Sede",
+      "tenantPlaceholder": "Selecione uma sede",
+      "submit": "Continuar",
+      "submitting": "Completando registro...",
+      "success": "Registro concluído com sucesso",
+      "errors": {
+        "tenantRequired": "Você deve selecionar uma sede",
+        "noToken": "Token inválido"
+      }
+    },
+    "oauth": {
+      "error": "Erro na autenticação",
+      "processing": "Processando autenticação...",
+      "noToken": "Token de autenticação não recebido",
+      "noCode": "Código de autorização não recebido",
+      "noTenant": "Não foi possível determinar o tenant"
+    }
+  },
+  "userMenu": {
+    "profile": "Meu Perfil",
+    "settings": "Configurações",
+    "admin": "Painel de Administração"
+  },
+  "passwordGenerator": {
+    "placeholder": "A senha gerada aparecerá aqui",
+    "generate": "Gerar senha",
+    "copy": "Copiar senha",
+    "copied": "Senha copiada para a área de transferência",
+    "copyError": "Erro ao copiar a senha",
+    "noOptions": "Por favor selecione pelo menos um tipo de caractere"
+  },
+  "notifications": {
+    "activating": "Ativando notificações...",
+    "activationMessage": "Notificaremos quando sua conta estiver completamente ativada. Por favor, aceite as permissões quando seu navegador solicitar.",
+    "activated": "Notificações ativadas!",
+    "activatedMessage": "Você receberá notificações quando sua conta estiver completamente ativada e sobre eventos importantes.",
+    "enable": "Ativar notificações",
+    "disable": "Desativar notificações",
+    "permissionDenied": "Permissões de notificação negadas"
+  }
+}
+

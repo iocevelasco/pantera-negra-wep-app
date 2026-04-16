@@ -1,0 +1,45 @@
+# Variables de entorno - NUNCA subir
+.env
+.env.*
+!.env.example
+
+# Llaves criptográficas - NUNCA subir
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+**/dist/
+**/build/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code - configuración local
+.claude/settings.local.json
+
+# Cache
+.cache/
+.turbo/
+*.tsbuildinfo
+
+# pnpm
+.pnpm-store/
