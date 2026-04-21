@@ -1,4 +1,6 @@
 import express from 'express';
+import helmet from 'helmet';
+import compression from 'compression';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { join, dirname } from 'path';
@@ -97,6 +99,15 @@ app.options('*', (req, res) => {
   }
   res.status(403).json({ error: 'CORS: Origin not allowed' });
 });
+
+// Security headers
+app.use(helmet({
+  crossOriginEmbedderPolicy: false, // Needed for Cloudinary image loading
+  contentSecurityPolicy: isProduction ? undefined : false,
+}));
+
+// Gzip compression
+app.use(compression());
 
 // Middleware - CORS configuration
 app.use(cors({

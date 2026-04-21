@@ -41,9 +41,16 @@ export default defineConfig({
       '@/lib': path.resolve(__dirname, './src/lib'),
       '@/hooks': path.resolve(__dirname, './src/hooks'),
     },
+    dedupe: ['react', 'react-dom'],
+  },
+  optimizeDeps: {
+    include: ['@pantera-negra/shared'],
   },
   server: {
     port: 5173,
+    warmup: {
+      clientFiles: ['./src/main.tsx', './src/pages/*.tsx'],
+    },
     proxy: {
       '/api': {
         target: process.env.VITE_API_BASE_URL || 'http://localhost:8080',
