@@ -10,11 +10,13 @@ beforeAll(() => {
 // Dynamic import so env is set first
 const { JWTService } = await import('../../services/jwt.service.js');
 
+import type { UserRole } from '@pantera-negra/shared';
+
 const basePayload = {
   sub: 'user-1',
   email: 'test@test.com',
   tenant_id: 'tenant-1',
-  roles: ['student'] as const,
+  roles: ['student'] as UserRole[],
 };
 
 describe('JWTService.generateAccessToken()', () => {
