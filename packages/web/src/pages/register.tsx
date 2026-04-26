@@ -10,6 +10,7 @@ import { ArrowLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { AuthLayout } from "@/components/auth/auth-layout";
 import { RegisterForm } from "@/components/auth/register-form";
+import { MatFlowLogo } from "@/components/matflow-logo";
 
 export function RegisterPage() {
   const { t } = useTranslation();
@@ -20,17 +21,7 @@ export function RegisterPage() {
     >
         <div className="w-full max-w-md">
           <div className="flex justify-center mb-8">
-            <div className="flex items-center gap-3" role="banner">
-              <img
-                src="/logo.png"
-                alt={t("layout.appName")}
-                className="h-12 w-auto object-contain"
-                aria-hidden="true"
-              />
-              <h1 className="text-2xl font-bold text-white">
-                {t("layout.appName")}
-              </h1>
-            </div>
+            <MatFlowLogo variant="light" size="lg" />
           </div>
 
           <Card className="border" role="main" aria-labelledby="register-title">

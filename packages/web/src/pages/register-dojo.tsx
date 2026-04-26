@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Eye, EyeOff, ArrowLeft, ArrowRight, Check, Building2, User } from 'lucide-react';
+import { MatFlowLogo } from '@/components/matflow-logo';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -260,13 +261,11 @@ export function RegisterDojoPage() {
       <div className="w-full max-w-md">
 
         {/* Header */}
-        <div className="flex justify-center mb-8">
-          <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="MatFlow" className="h-10 w-auto object-contain" />
-            <div>
-              <h1 className="text-xl font-bold text-white leading-tight">Registra tu academia</h1>
-              <p className="text-xs text-white/60">Gratis · Sin tarjeta de crédito</p>
-            </div>
+        <div className="flex flex-col items-center gap-2 mb-8">
+          <MatFlowLogo variant="light" size="lg" />
+          <div className="text-center">
+            <h1 className="text-base font-medium text-white/80 leading-tight">Registra tu academia</h1>
+            <p className="text-xs text-white/50">Gratis · Sin tarjeta de crédito</p>
           </div>
         </div>
 

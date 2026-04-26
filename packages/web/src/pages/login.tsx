@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import React from "react";
 import { LoginForm } from "@/components/auth/login-form-card";
 import { AuthLayout } from "@/components/auth/auth-layout";
+import { MatFlowLogo } from "@/components/matflow-logo";
 import { toast } from "sonner";
 
 export function LoginPage() {
@@ -44,16 +45,8 @@ export function LoginPage() {
   return (
     <AuthLayout>
       <div className="flex flex-col items-center justify-center py-6 sm:py-20 w-full">
-          <div className="mb-3 sm:mb-5 flex items-center gap-3" role="banner">
-            <img
-              src="/logo.png"
-              alt={t("layout.appName")}
-              className="h-12 w-auto object-contain"
-              aria-hidden="true"
-            />
-            <h1 className="text-2xl font-bold text-white">
-              {t("layout.appName")}
-            </h1>
+          <div className="mb-3 sm:mb-5 flex items-center" role="banner">
+            <MatFlowLogo variant="light" size="lg" />
           </div>
           <div className="mb-3 sm:mb-5 flex items-center gap-2">
             <p className="text-sm uppercase tracking-[0.25em] text-red-300/80">

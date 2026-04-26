@@ -11,6 +11,7 @@ import { useUser } from '@/hooks/user/use-user';
 import { useQuery } from '@tanstack/react-query';
 import { tenantsApi } from '@/api/tenants';
 import { QueryKeys } from '@/lib/query-keys';
+import { MatFlowLogo } from '@/components/matflow-logo';
 
 export function DashboardSidebar() {
   const location = useLocation();
@@ -62,23 +63,16 @@ export function DashboardSidebar() {
         )}
       >
       <div className="h-auto min-h-16 flex items-center justify-between px-6 border-b py-2">
-        <div className="flex items-center flex-1 min-w-0">
-          <img 
-            src="/logo.png" 
-            alt="Pantera Negra" 
-            className="h-12 w-auto object-contain mr-3 border-2 rounded-full shrink-0"
-          />
-          <div className="flex flex-col min-w-0">
-            <h3 className="font-bold text-lg tracking-tight truncate">{t('layout.appName')}</h3>
-            {tenant && (
-              <span 
-                className="text-xs text-black font-medium truncate bg-white rounded-full px-2 py-0.5 inline-block w-fit" 
-                title={tenant.name}
-              >
-                {tenant.name}
-              </span>
-            )}
-          </div>
+        <div className="flex items-center flex-1 min-w-0 gap-2">
+          <MatFlowLogo size="sm" className="shrink-0" />
+          {tenant && (
+            <span
+              className="text-xs font-medium truncate bg-muted rounded-full px-2 py-0.5 inline-block w-fit ml-1"
+              title={tenant.name}
+            >
+              {tenant.name}
+            </span>
+          )}
         </div>
         {/* Close button for mobile */}
         <Button

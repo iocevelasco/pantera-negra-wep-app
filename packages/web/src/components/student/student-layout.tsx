@@ -14,6 +14,7 @@ import { cn } from '@/lib/utils';
 import type { Membership, Tenant, Payment } from '@pantera-negra/shared';
 import type { UserData } from '@/stores/user-store';
 import { QueryKeys } from '@/lib/query-keys';
+import { MatFlowLogo } from '@/components/matflow-logo';
 
 interface StudentDataContextValue {
   user: UserData | null;
@@ -171,12 +172,8 @@ export function StudentLayout({
           {showHeader && (
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-border pb-6">
               <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto">
-                <div className="p-2 rounded-xl">
-                  <img 
-                    src="/logo.png" 
-                    alt="Pantera Negra Logo" 
-                    className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
-                  />
+                <div className="p-2">
+                  <MatFlowLogo size="md" markOnly />
                 </div>
                 <div className="min-w-0 flex-1">
                   <h1 className="text-xl sm:text-3xl font-bold tracking-tight">

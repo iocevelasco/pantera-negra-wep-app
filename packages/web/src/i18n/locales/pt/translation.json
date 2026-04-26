@@ -468,7 +468,7 @@
     }
   },
   "layout": {
-    "appName": "Pantera Negra",
+    "appName": "MatFlow",
     "sections": {
       "management": "Gestão",
       "business": "Negócio",
@@ -543,7 +543,8 @@
         "required": "Por favor, preencha todos os campos",
         "invalidEmail": "Por favor, insira um e-mail válido",
         "loginFailed": "Erro ao fazer login",
-        "networkError": "Erro de conexão. Por favor, tente novamente"
+        "networkError": "Erro de conexão. Por favor, tente novamente",
+        "recaptchaError": "Erro de verificação de segurança. Por favor, recarregue a página e tente novamente."
       },
       "success": "Login realizado com sucesso"
     },
@@ -663,4 +664,3 @@
     "permissionDenied": "Permissões de notificação negadas"
   }
 }
-

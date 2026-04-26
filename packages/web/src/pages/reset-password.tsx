@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Eye, EyeOff, AlertCircle, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { MatFlowLogo } from '@/components/matflow-logo';
 import { useTranslation } from 'react-i18next';
 import { useResetPassword } from '@/hooks/auth/use-auth';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -79,15 +80,7 @@ export function ResetPasswordPage() {
     <div className="min-h-screen bg-gradient-to-br from-background to-muted flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-8">
-          <div className="flex items-center gap-3" role="banner">
-            <img 
-              src="/logo.png" 
-              alt={t('layout.appName')}
-              className="h-12 w-auto object-contain"
-              aria-hidden="true"
-            />
-            <h1 className="text-2xl font-bold">{t('layout.appName')}</h1>
-          </div>
+          <MatFlowLogo size="lg" />
         </div>
 
         <Card className="border" role="main" aria-labelledby="reset-password-title">
