@@ -54,14 +54,39 @@ export function Hero() {
           </div>
         </div>
 
-        {/* App preview placeholder */}
-        <div className="mt-16 border border-[#2A2A2A] bg-[#111111] aspect-[16/9] max-w-4xl flex items-center justify-center" style={{ borderRadius: '2px' }}>
-          <div className="text-center p-8">
-            <div className="w-12 h-12 bg-[#1A1A1A] border border-[#2A2A2A] mx-auto mb-4 flex items-center justify-center" style={{ borderRadius: '2px' }}>
-              <span className="text-[#EF233C] font-mono text-xs">MF</span>
+        {/* App screenshots — real dashboard */}
+        <div className="mt-16 max-w-4xl relative">
+          {/* Main screenshot */}
+          <div className="border border-[#2A2A2A] overflow-hidden shadow-2xl" style={{ borderRadius: '4px' }}>
+            <div className="bg-[#1A1A1A] px-4 py-2.5 flex items-center gap-2 border-b border-[#2A2A2A]">
+              <span className="w-3 h-3 rounded-full bg-[#EF233C] opacity-70" />
+              <span className="w-3 h-3 rounded-full bg-[#F59E0B] opacity-70" />
+              <span className="w-3 h-3 rounded-full bg-[#22C55E] opacity-70" />
+              <span className="ml-3 text-xs text-[#4B5563] font-mono">pantera-negra-app.fly.dev</span>
             </div>
-            <p className="text-[#6B7280] text-sm font-mono">[ Screenshot de la plataforma ]</p>
-            <p className="text-[#4B5563] text-xs mt-1 font-mono">Panel de membresías — MatFlow</p>
+            <img
+              src="/screenshot-dashboard.png"
+              alt="Panel de membresías de Pantera Negra BJJ en MatFlow"
+              className="w-full block"
+              loading="eager"
+            />
+          </div>
+
+          {/* Floating panel screenshot */}
+          <div
+            className="absolute -bottom-6 -right-6 w-64 border border-[#2A2A2A] overflow-hidden shadow-2xl hidden lg:block"
+            style={{ borderRadius: '4px' }}
+          >
+            <div className="bg-[#1A1A1A] px-3 py-1.5 flex items-center gap-1.5 border-b border-[#2A2A2A]">
+              <span className="w-2 h-2 rounded-full bg-[#EF233C] opacity-70" />
+              <span className="text-[10px] text-[#4B5563] font-mono">Dashboard</span>
+            </div>
+            <img
+              src="/screenshot-panel.png"
+              alt="Estadísticas del dashboard de MatFlow"
+              className="w-full block"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
