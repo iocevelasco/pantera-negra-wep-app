@@ -121,6 +121,43 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@22.0.0)(tsx@4.19.2)
 
+  packages/landing:
+    dependencies:
+      lucide-react:
+        specifier: ^0.454.0
+        version: 0.454.0(react@19.2.0)
+      react:
+        specifier: 19.2.0
+        version: 19.2.0
+      react-dom:
+        specifier: 19.2.0
+        version: 19.2.0(react@19.2.0)
+    devDependencies:
+      '@tailwindcss/postcss':
+        specifier: ^4.1.9
+        version: 4.1.9
+      '@types/react':
+        specifier: ^19
+        version: 19.0.0
+      '@types/react-dom':
+        specifier: ^19
+        version: 19.0.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@6.0.0)
+      postcss:
+        specifier: ^8.5
+        version: 8.5.0
+      tailwindcss:
+        specifier: ^4.1.9
+        version: 4.1.9
+      typescript:
+        specifier: ^5
+        version: 5.0.2
+      vite:
+        specifier: ^6.0.0
+        version: 6.0.0(@types/node@22.0.0)(tsx@4.19.2)
+
   packages/shared:
     dependencies:
       zod:

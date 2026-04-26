@@ -1,25 +1,9 @@
-FROM node:20-alpine AS builder
+# Serve pre-built static files with nginx
+# Build locally first: pnpm build:landing
+FROM nginx:alpine
 
-RUN corepack enable && corepack prepare pnpm@8.6.12 --activate
+COPY dist /usr/share/nginx/html
 
-WORKDIR /app
-
-# Copy workspace files
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-COPY packages/landing/package.json ./packages/landing/
-
-RUN pnpm install --frozen-lockfile --filter @pantera-negra/landing
-
-COPY packages/landing ./packages/landing
-
-RUN pnpm --filter @pantera-negra/landing build
-
-# Production: nginx to serve static files
-FROM nginx:alpine AS production
-
-COPY --from=builder /app/packages/landing/dist /usr/share/nginx/html
-
-# SPA routing support
 RUN printf 'server {\n\
   listen 8080;\n\
   root /usr/share/nginx/html;\n\
@@ -29,6 +13,7 @@ RUN printf 'server {\n\
   }\n\
   gzip on;\n\
   gzip_types text/css application/javascript application/json image/svg+xml;\n\
+  add_header Cache-Control "public, max-age=31536000" /assets;\n\
 }\n' > /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080

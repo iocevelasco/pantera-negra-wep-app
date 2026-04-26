@@ -1,9 +1,7 @@
-# MatFlow Landing Page — Fly.io config
+# MatFlow Landing Page — Fly.io
+# Deploy: flyctl deploy --app matflow-landing --image registry.fly.io/matflow-landing:latest
 app = 'matflow-landing'
 primary_region = 'gru'
-
-[build]
-  dockerfile = 'packages/landing/Dockerfile'
 
 [http_service]
   internal_port = 8080
