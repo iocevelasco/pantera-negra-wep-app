@@ -46,7 +46,7 @@ export function Pricing() {
               </div>
               <p className="text-xs text-[#EF233C] font-mono mb-6">Para siempre — sin tarjeta de crédito</p>
               <a
-                href="https://pantera-negra-app.fly.dev/register"
+                href="https://pantera-negra-app.fly.dev/register-dojo"
                 className="block text-center bg-[#EF233C] text-white font-medium py-3 text-sm hover:bg-[#C41E30] transition-colors"
                 style={{ borderRadius: '2px' }}
               >

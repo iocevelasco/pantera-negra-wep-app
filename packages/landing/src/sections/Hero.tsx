@@ -41,7 +41,7 @@ export function Hero() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
-              href={`${APP_URL}/register`}
+              href={`${APP_URL}/register-dojo`}
               className="inline-flex items-center gap-2 bg-[#EF233C] text-white font-medium px-6 py-3.5 text-base hover:bg-[#C41E30] transition-colors"
               style={{ borderRadius: '2px' }}
             >

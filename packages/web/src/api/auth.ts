@@ -102,6 +102,25 @@ export const authApi = {
     return response.data;
   },
 
+  // Register a new dojo (admin onboarding — creates user + tenant in one step)
+  registerDojo: async (data: {
+    name: string;
+    email: string;
+    password: string;
+    academyName: string;
+    martialArt: string;
+  }): Promise<AuthResponse> => {
+    const response = await apiClient.post<ApiResponse<AuthResponse>>(
+      '/api/auth/register-dojo',
+      data,
+      { skipAuth: true }
+    );
+    if (!response.success || !response.data) {
+      throw new Error(response.error || 'Error al crear la academia');
+    }
+    return response.data;
+  },
+
   // Complete Google OAuth registration by selecting tenant
   completeGoogleRegistration: async (tenant_id: string): Promise<AuthResponse> => {
     const response = await apiClient.post<ApiResponse<AuthResponse>>(

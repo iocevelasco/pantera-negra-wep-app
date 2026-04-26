@@ -13,6 +13,7 @@ const LoginPage = lazy(() => import('./pages/login').then(m => ({ default: m.Log
 const RegisterPage = lazy(() => import('./pages/register').then(m => ({ default: m.RegisterPage })));
 const ResetPasswordPage = lazy(() => import('./pages/reset-password').then(m => ({ default: m.ResetPasswordPage })));
 const OAuthCallbackPage = lazy(() => import('./pages/oauth-callback').then(m => ({ default: m.OAuthCallbackPage })));
+const RegisterDojoPage = lazy(() => import('./pages/register-dojo').then(m => ({ default: m.RegisterDojoPage })));
 const DashboardPage = lazy(() => import('./pages/dashboard').then(m => ({ default: m.DashboardPage })));
 const StudentViewPage = lazy(() => import('./pages/student-view').then(m => ({ default: m.StudentViewPage })));
 const MembersPage = lazy(() => import('./pages/members').then(m => ({ default: m.MembersPage })));
@@ -66,6 +67,14 @@ export function AppRoutes() {
         element={
           <LazyRoute>
             <RegisterPage />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path={ROUTES.REGISTER_DOJO}
+        element={
+          <LazyRoute>
+            <RegisterDojoPage />
           </LazyRoute>
         }
       />

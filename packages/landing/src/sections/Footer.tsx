@@ -26,7 +26,7 @@ export function Footer() {
             <a href="#como-funciona" className="text-xs text-[#6B7280] hover:text-white transition-colors">Cómo funciona</a>
             <a href="#precios" className="text-xs text-[#6B7280] hover:text-white transition-colors">Precios</a>
             <a href={APP_URL} className="text-xs text-[#6B7280] hover:text-white transition-colors">Iniciar sesión</a>
-            <a href={`${APP_URL}/register`} className="text-xs text-[#EF233C] hover:text-white transition-colors">Registro gratuito</a>
+            <a href={`${APP_URL}/register-dojo`} className="text-xs text-[#EF233C] hover:text-white transition-colors">Registro gratuito</a>
           </nav>
 
           {/* Legal */}

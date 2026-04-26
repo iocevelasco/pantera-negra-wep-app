@@ -5,6 +5,7 @@ import { isAuthenticated } from '../middleware/auth.middleware.js';
 import {
   login,
   register,
+  registerDojo,
   getGoogleAuthUrl,
   handleGoogleCallback,
   completeGoogleRegistration,
@@ -90,3 +91,9 @@ authRouter.post('/forgot-password', authLimiter, forgotPassword);
  * Reset password using reset token
  */
 authRouter.post('/reset-password', authLimiter, resetPassword);
+
+/**
+ * POST /auth/register-dojo
+ * Onboarding: create user (admin) + dojo (tenant) in one step.
+ */
+authRouter.post('/register-dojo', authLimiter, registerDojo);

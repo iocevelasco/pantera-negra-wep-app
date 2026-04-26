@@ -34,7 +34,7 @@ export function Nav() {
             Iniciar sesión
           </a>
           <a
-            href={`${APP_URL}/register`}
+            href={`${APP_URL}/register-dojo`}
             className="text-sm font-medium bg-[#EF233C] text-white px-4 py-2 hover:bg-[#C41E30] transition-colors"
             style={{ borderRadius: '2px' }}
           >
@@ -60,7 +60,7 @@ export function Nav() {
           <a href="#precios" className="text-sm text-[#9CA3AF]" onClick={() => setOpen(false)}>Precios</a>
           <a href={APP_URL} className="text-sm text-[#9CA3AF]" onClick={() => setOpen(false)}>Iniciar sesión</a>
           <a
-            href={`${APP_URL}/register`}
+            href={`${APP_URL}/register-dojo`}
             className="text-sm font-medium bg-[#EF233C] text-white px-4 py-2.5 text-center"
             style={{ borderRadius: '2px' }}
           >

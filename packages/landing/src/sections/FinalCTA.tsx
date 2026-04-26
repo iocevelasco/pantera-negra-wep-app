@@ -33,7 +33,7 @@ export function FinalCTA() {
         </p>
 
         <a
-          href="https://pantera-negra-app.fly.dev/register"
+          href="https://pantera-negra-app.fly.dev/register-dojo"
           className="inline-flex items-center gap-2 bg-[#EF233C] text-white font-medium px-8 py-4 text-base hover:bg-[#C41E30] transition-colors"
           style={{ borderRadius: '2px' }}
         >

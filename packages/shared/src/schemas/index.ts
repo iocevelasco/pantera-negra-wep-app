@@ -25,6 +25,23 @@ const dojoScheduleSlotSchema = z.object({
   close: z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'Invalid time (HH:mm)'),
 });
 
+// ============================================================================
+// Dojo Registration Schema (public onboarding)
+// ============================================================================
+
+export const registerDojoSchema = z.object({
+  // Step 1 — account
+  name:            z.string().min(2, 'Name must be at least 2 characters'),
+  email:           z.string().email('Invalid email format'),
+  password:        z.string().min(8, 'Password must be at least 8 characters'),
+  // Step 2 — dojo
+  academyName:     z.string().min(2, 'Academy name must be at least 2 characters'),
+  martialArt:      z.enum(['BJJ', 'Karate', 'Judo', 'Taekwondo', 'MuayThai', 'MMA', 'Boxing', 'Kickboxing', 'Wrestling', 'Other']),
+  recaptchaToken:  z.string().optional(),
+});
+
+export type RegisterDojoInput = z.infer<typeof registerDojoSchema>;
+
 export const organizationSchema = z.object({
   name:          z.string().min(2, 'Name must be at least 2 characters'),
   description:   z.string().optional(),

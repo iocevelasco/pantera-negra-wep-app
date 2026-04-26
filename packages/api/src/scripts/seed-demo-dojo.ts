@@ -296,7 +296,7 @@ async function seedDemoDojo() {
           date: fmt(payDate),
           status: 'completed',
           plan: s.plan,
-          paymentType: randomItem(['transfer', 'cash', 'card'] as const),
+          paymentType: randomItem(['transfer', 'cash', 'card'] as ('transfer' | 'cash' | 'card')[]),
           currency: 'BRL',
         });
       }

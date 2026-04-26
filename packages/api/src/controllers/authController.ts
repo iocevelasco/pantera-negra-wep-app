@@ -2,11 +2,13 @@ import { Request, Response } from 'express';
 import { SERVER_CONFIG, isProduction } from '../config/app.config.js';
 import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
+import mongoose from 'mongoose';
 import { AuthService } from '../services/auth.service.js';
 import { JWTService } from '../services/jwt.service.js';
 import { EmailService } from '../services/email.service.js';
 import { UserModel } from '../models/User.js';
 import { TenantModel } from '../models/Tenant.js';
+import { registerDojoSchema } from '@pantera-negra/shared';
 import { verifyRecaptchaFromRequest } from '../services/recaptcha.service.js';
 
 /**
@@ -932,5 +934,73 @@ export const resetPassword = async (req: Request, res: Response) => {
       success: false,
       error: errorMessage,
     });
+  }
+};
+
+
+/**
+ * POST /auth/register-dojo
+ * Onboarding: create a user (admin) + their dojo (tenant) in one step.
+ */
+export const registerDojo = async (req: Request, res: Response) => {
+  try {
+    const parsed = registerDojoSchema.safeParse(req.body);
+    if (!parsed.success) {
+      return res.status(400).json({ success: false, error: parsed.error.issues[0].message });
+    }
+
+    const { name, email, password, academyName, martialArt } = parsed.data;
+    const normalizedEmail = email.toLowerCase().trim();
+
+    const existing = await UserModel.findOne({ email: normalizedEmail });
+    if (existing) {
+      return res.status(409).json({ success: false, error: 'Ya existe una cuenta con ese email.' });
+    }
+
+    const baseSlug = academyName
+      .toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 40);
+
+    let slug = baseSlug;
+    let attempt = 0;
+    while (await TenantModel.findOne({ slug })) { slug = `${baseSlug}-${++attempt}`; }
+
+    const tenant = await TenantModel.create({ slug, name: academyName, martial_art: martialArt });
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await UserModel.create({
+      email: normalizedEmail,
+      name,
+      email_verified: true,
+      password: hashedPassword,
+      tenant_id: new mongoose.Types.ObjectId(tenant._id.toString()),
+      roles: ['admin', 'instructor'],
+      rank: 'White',
+      stripes: 0,
+      registration: { status: 'confirmed', confirmedAt: new Date() },
+      student_enabled: true,
+    });
+
+    const tokens = await AuthService.generateTokens(
+      user._id.toString(), user.email, tenant._id.toString()
+    );
+
+    res.cookie('refresh_token', tokens.refreshToken, {
+      httpOnly: true, secure: isProduction, sameSite: 'lax',
+      maxAge: 90 * 24 * 60 * 60 * 1000,
+    });
+
+    return res.status(201).json({
+      success: true,
+      data: {
+        accessToken: tokens.accessToken,
+        refreshToken: tokens.refreshToken,
+        user: { id: user._id.toString(), email: user.email, name: user.name, roles: user.roles },
+      },
+    });
+  } catch (error) {
+    console.error('❌ [AUTH] registerDojo error:', error);
+    return res.status(500).json({ success: false, error: error instanceof Error ? error.message : 'Unknown error' });
   }
 };

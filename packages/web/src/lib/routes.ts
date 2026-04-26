@@ -6,6 +6,7 @@ export const ROUTES = {
   // Public routes
   LOGIN: '/login',
   REGISTER: '/register',
+  REGISTER_DOJO: '/register-dojo',
   RESET_PASSWORD: '/reset-password',
   OAUTH_CALLBACK: '/oauth/callback',
 

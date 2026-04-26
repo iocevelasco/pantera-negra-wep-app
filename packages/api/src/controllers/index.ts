@@ -26,4 +26,5 @@ export {
   getCurrentUser,
   forgotPassword,
   resetPassword,
+  registerDojo,
 } from './authController.js';

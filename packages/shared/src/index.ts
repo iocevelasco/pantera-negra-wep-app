@@ -59,6 +59,7 @@ export type {
 } from './types/index.js';
 export { MARTIAL_ART_RANKS } from './types/index.js';
 export {
+  registerDojoSchema,
   organizationSchema,
   createOrganizationSchema,
   updateOrganizationSchema,
