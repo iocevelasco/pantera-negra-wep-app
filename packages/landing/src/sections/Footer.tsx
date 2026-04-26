@@ -33,7 +33,24 @@ export function Footer() {
           <div className="text-right">
             <p className="text-xs text-[#6B7280] font-mono">© {year} MatFlow</p>
             <p className="text-xs text-[#4B5563] mt-1 font-mono">Hecho para el tatami</p>
+            <p className="text-xs text-[#4B5563] mt-2 font-mono">
+              Desarrollado por{' '}
+              <span className="text-[#6B7280]">Ioce Velasco</span>
+            </p>
           </div>
+        </div>
+
+        {/* Bottom divider + copyright full */}
+        <div className="mt-8 pt-6 border-t border-[#1A1A1A] flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="text-xs text-[#4B5563] font-mono">
+            © {year} MatFlow. Todos los derechos reservados.
+          </p>
+          <p className="text-xs text-[#4B5563] font-mono">
+            Diseñado y desarrollado por{' '}
+            <span className="text-[#6B7280] hover:text-[#EF233C] transition-colors cursor-default">
+              Ioce Velasco
+            </span>
+          </p>
         </div>
       </div>
     </footer>
