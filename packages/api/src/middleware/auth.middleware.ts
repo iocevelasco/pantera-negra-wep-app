@@ -97,6 +97,21 @@ export function requireAdmin(req: Request, res: Response, next: NextFunction) {
 }
 
 /**
+ * Middleware to require network_owner role
+ * Network owners manage multiple dojos across an organization
+ */
+export function requireNetworkOwner(req: Request, res: Response, next: NextFunction) {
+  if (!req.user) {
+    return res.status(401).json({ success: false, error: 'Authentication required' });
+  }
+  const userRoles = getUserRoles(req.user);
+  if (!hasRole(userRoles, ['network_owner'])) {
+    return res.status(403).json({ success: false, error: 'Network owner access required' });
+  }
+  next();
+}
+
+/**
  * Middleware to require specific role
  */
 export function requireRole(role: string | string[]) {

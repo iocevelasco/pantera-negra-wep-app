@@ -2,10 +2,60 @@ import { z } from 'zod';
 
 // Validation schemas shared between frontend and backend
 
+// ============================================================================
+// Martial Arts & Organization Schemas
+// ============================================================================
+
+const martialArtEnum = z.enum([
+  'BJJ', 'Karate', 'Judo', 'Taekwondo', 'MuayThai', 'MMA', 'Boxing', 'Kickboxing', 'Wrestling', 'Other',
+]);
+
+const dojoAddressSchema = z.object({
+  street:      z.string().optional(),
+  city:        z.string().optional(),
+  state:       z.string().optional(),
+  country:     z.string().optional(),
+  postal_code: z.string().optional(),
+  coordinates: z.object({ lat: z.number(), lng: z.number() }).optional(),
+});
+
+const dojoScheduleSlotSchema = z.object({
+  day:   z.number().int().min(0).max(6),
+  open:  z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'Invalid time (HH:mm)'),
+  close: z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'Invalid time (HH:mm)'),
+});
+
+export const organizationSchema = z.object({
+  name:          z.string().min(2, 'Name must be at least 2 characters'),
+  description:   z.string().optional(),
+  logo_url:      z.string().url('Invalid URL').optional().or(z.literal('')),
+  website:       z.string().url('Invalid URL').optional().or(z.literal('')),
+  contact_email: z.string().email('Invalid email').optional().or(z.literal('')),
+});
+
+export const createOrganizationSchema = organizationSchema;
+export const updateOrganizationSchema = organizationSchema.partial();
+
+export const createDojoSchema = z.object({
+  name:            z.string().min(2, 'Name must be at least 2 characters'),
+  slug:            z.string().min(2).regex(/^[a-z0-9-]+$/, 'Only lowercase letters, numbers and hyphens').optional(),
+  martial_art:     martialArtEnum,
+  organization_id: z.string().min(1, 'Organization is required'),
+  description:     z.string().optional(),
+  logo_url:        z.string().url('Invalid URL').optional().or(z.literal('')),
+  address:         dojoAddressSchema.optional(),
+  phone:           z.string().optional(),
+  email:           z.string().email('Invalid email').optional().or(z.literal('')),
+  website:         z.string().url('Invalid URL').optional().or(z.literal('')),
+  schedule:        z.array(dojoScheduleSlotSchema).optional(),
+});
+
+export const updateDojoSchema = createDojoSchema.omit({ organization_id: true, slug: true }).partial();
+
 export const userSchema = z.object({
   email: z.string().email('Invalid email format'),
   name: z.string().min(1, 'Name is required').optional(),
-  roles: z.array(z.enum(['admin', 'instructor', 'student', 'owner'])).min(1, 'At least one role is required'),
+  roles: z.array(z.enum(['admin', 'instructor', 'student', 'owner', 'network_owner'])).min(1, 'At least one role is required'),
   tenant_id: z.string().min(1, 'Tenant is required'),
   membership_id: z.string().optional(),
   rank: z.enum(['White', 'Blue', 'Purple', 'Brown', 'Black']),

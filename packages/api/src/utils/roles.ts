@@ -53,12 +53,20 @@ export function isStudent(userRoles: UserRole[] | undefined): boolean {
 }
 
 /**
- * Get primary role (admin > owner > instructor > student)
+ * Check if user is a network owner
+ */
+export function isNetworkOwner(userRoles: UserRole[] | undefined): boolean {
+  return hasRole(userRoles, 'network_owner');
+}
+
+/**
+ * Get primary role (network_owner > admin > owner > instructor > student)
  */
 export function getPrimaryRole(userRoles: UserRole[] | undefined): UserRole | undefined {
   if (!userRoles || userRoles.length === 0) {
     return undefined;
   }
+  if (userRoles.includes('network_owner')) return 'network_owner';
   if (userRoles.includes('admin')) return 'admin';
   if (userRoles.includes('owner')) return 'owner';
   if (userRoles.includes('instructor')) return 'instructor';

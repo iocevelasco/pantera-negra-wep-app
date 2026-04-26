@@ -5,6 +5,11 @@ export * from './utils/environment.js';
 
 // Re-export commonly used types
 export type {
+  MartialArt,
+  RankLevel,
+  DojoScheduleSlot,
+  DojoAddress,
+  Organization,
   Membership,
   MembershipPlan,
   Classes,
@@ -52,7 +57,13 @@ export type {
   SubscriptionResponse,
   UserSubscriptionsResponse,
 } from './types/index.js';
+export { MARTIAL_ART_RANKS } from './types/index.js';
 export {
+  organizationSchema,
+  createOrganizationSchema,
+  updateOrganizationSchema,
+  createDojoSchema,
+  updateDojoSchema,
   userSchema,
   membershipSchema,
   classSchema,

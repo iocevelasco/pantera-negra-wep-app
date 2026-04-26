@@ -1,6 +1,156 @@
 // Common types shared between frontend and backend
 
 // ============================================================================
+// Martial Arts & Rank Systems
+// ============================================================================
+
+export type MartialArt =
+  | 'BJJ'
+  | 'Karate'
+  | 'Judo'
+  | 'Taekwondo'
+  | 'MuayThai'
+  | 'MMA'
+  | 'Boxing'
+  | 'Kickboxing'
+  | 'Wrestling'
+  | 'Other';
+
+export interface RankLevel {
+  key: string;       // internal key e.g. "white", "1dan"
+  label: string;     // display label e.g. "White Belt", "1st Dan"
+  order: number;     // sort order
+  color?: string;    // hex or named color for badge
+  maxStripes?: number; // if the rank uses stripes/degrees
+}
+
+export const MARTIAL_ART_RANKS: Record<MartialArt, RankLevel[]> = {
+  BJJ: [
+    { key: 'white',  label: 'White Belt',  order: 0, color: '#FFFFFF', maxStripes: 4 },
+    { key: 'blue',   label: 'Blue Belt',   order: 1, color: '#3B82F6', maxStripes: 4 },
+    { key: 'purple', label: 'Purple Belt', order: 2, color: '#9333EA', maxStripes: 4 },
+    { key: 'brown',  label: 'Brown Belt',  order: 3, color: '#92400E', maxStripes: 4 },
+    { key: 'black',  label: 'Black Belt',  order: 4, color: '#111827', maxStripes: 6 },
+  ],
+  Karate: [
+    { key: '10kyu', label: '10th Kyu (White)',  order: 0,  color: '#FFFFFF' },
+    { key: '9kyu',  label: '9th Kyu (Yellow)',  order: 1,  color: '#FDE047' },
+    { key: '8kyu',  label: '8th Kyu (Orange)',  order: 2,  color: '#FB923C' },
+    { key: '7kyu',  label: '7th Kyu (Green)',   order: 3,  color: '#22C55E' },
+    { key: '6kyu',  label: '6th Kyu (Blue)',    order: 4,  color: '#3B82F6' },
+    { key: '5kyu',  label: '5th Kyu (Purple)',  order: 5,  color: '#9333EA' },
+    { key: '4kyu',  label: '4th Kyu (Purple)',  order: 6,  color: '#7E22CE' },
+    { key: '3kyu',  label: '3rd Kyu (Brown)',   order: 7,  color: '#92400E' },
+    { key: '2kyu',  label: '2nd Kyu (Brown)',   order: 8,  color: '#78350F' },
+    { key: '1kyu',  label: '1st Kyu (Brown)',   order: 9,  color: '#451A03' },
+    { key: '1dan',  label: '1st Dan (Black)',   order: 10, color: '#111827', maxStripes: 1 },
+    { key: '2dan',  label: '2nd Dan (Black)',   order: 11, color: '#111827', maxStripes: 1 },
+    { key: '3dan',  label: '3rd Dan (Black)',   order: 12, color: '#111827', maxStripes: 1 },
+    { key: '4dan',  label: '4th Dan (Black)',   order: 13, color: '#111827', maxStripes: 1 },
+    { key: '5dan',  label: '5th Dan (Black)',   order: 14, color: '#111827', maxStripes: 1 },
+  ],
+  Judo: [
+    { key: '6kyu',  label: '6th Kyu (White)',   order: 0,  color: '#FFFFFF' },
+    { key: '5kyu',  label: '5th Kyu (Yellow)',  order: 1,  color: '#FDE047' },
+    { key: '4kyu',  label: '4th Kyu (Orange)',  order: 2,  color: '#FB923C' },
+    { key: '3kyu',  label: '3rd Kyu (Green)',   order: 3,  color: '#22C55E' },
+    { key: '2kyu',  label: '2nd Kyu (Blue)',    order: 4,  color: '#3B82F6' },
+    { key: '1kyu',  label: '1st Kyu (Brown)',   order: 5,  color: '#92400E' },
+    { key: '1dan',  label: '1st Dan (Black)',   order: 6,  color: '#111827' },
+    { key: '2dan',  label: '2nd Dan (Black)',   order: 7,  color: '#111827' },
+    { key: '3dan',  label: '3rd Dan (Black)',   order: 8,  color: '#111827' },
+    { key: '4dan',  label: '4th Dan (Black)',   order: 9,  color: '#111827' },
+    { key: '5dan',  label: '5th Dan (Black)',   order: 10, color: '#111827' },
+    { key: '6dan',  label: '6th Dan (Red-White)', order: 11, color: '#EF4444' },
+    { key: '7dan',  label: '7th Dan (Red-White)', order: 12, color: '#EF4444' },
+    { key: '8dan',  label: '8th Dan (Red-White)', order: 13, color: '#EF4444' },
+    { key: '9dan',  label: '9th Dan (Red)',     order: 14, color: '#DC2626' },
+    { key: '10dan', label: '10th Dan (Red)',    order: 15, color: '#DC2626' },
+  ],
+  Taekwondo: [
+    { key: '9geup',  label: '9th Geup (White)',      order: 0,  color: '#FFFFFF' },
+    { key: '8geup',  label: '8th Geup (Yellow)',     order: 1,  color: '#FDE047' },
+    { key: '7geup',  label: '7th Geup (Yellow-Green)', order: 2, color: '#A3E635' },
+    { key: '6geup',  label: '6th Geup (Green)',      order: 3,  color: '#22C55E' },
+    { key: '5geup',  label: '5th Geup (Green-Blue)', order: 4,  color: '#34D399' },
+    { key: '4geup',  label: '4th Geup (Blue)',       order: 5,  color: '#3B82F6' },
+    { key: '3geup',  label: '3rd Geup (Blue-Red)',   order: 6,  color: '#818CF8' },
+    { key: '2geup',  label: '2nd Geup (Red)',        order: 7,  color: '#EF4444' },
+    { key: '1geup',  label: '1st Geup (Red-Black)',  order: 8,  color: '#B91C1C' },
+    { key: '1dan',   label: '1st Dan (Black)',       order: 9,  color: '#111827' },
+    { key: '2dan',   label: '2nd Dan (Black)',       order: 10, color: '#111827' },
+    { key: '3dan',   label: '3rd Dan (Black)',       order: 11, color: '#111827' },
+    { key: '4dan',   label: '4th Dan (Black)',       order: 12, color: '#111827' },
+    { key: '5dan',   label: '5th Dan (Black)',       order: 13, color: '#111827' },
+    { key: '6dan',   label: '6th Dan (Black)',       order: 14, color: '#111827' },
+    { key: '7dan',   label: '7th Dan (Black)',       order: 15, color: '#111827' },
+    { key: '8dan',   label: '8th Dan (Black)',       order: 16, color: '#111827' },
+    { key: '9dan',   label: '9th Dan (Black)',       order: 17, color: '#111827' },
+  ],
+  MuayThai: [
+    { key: 'white',       label: 'White Prajied',       order: 0, color: '#FFFFFF' },
+    { key: 'yellow',      label: 'Yellow Prajied',      order: 1, color: '#FDE047' },
+    { key: 'green',       label: 'Green Prajied',       order: 2, color: '#22C55E' },
+    { key: 'blue',        label: 'Blue Prajied',        order: 3, color: '#3B82F6' },
+    { key: 'red',         label: 'Red Prajied',         order: 4, color: '#EF4444' },
+    { key: 'black',       label: 'Black Prajied',       order: 5, color: '#111827' },
+    { key: 'black_gold',  label: 'Black/Gold Prajied',  order: 6, color: '#78350F' },
+  ],
+  MMA: [
+    { key: 'beginner',     label: 'Beginner',     order: 0, color: '#D1D5DB' },
+    { key: 'intermediate', label: 'Intermediate', order: 1, color: '#6B7280' },
+    { key: 'advanced',     label: 'Advanced',     order: 2, color: '#374151' },
+    { key: 'competitor',   label: 'Competitor',   order: 3, color: '#111827' },
+  ],
+  Boxing: [
+    { key: 'novice',       label: 'Novice',       order: 0, color: '#D1D5DB' },
+    { key: 'intermediate', label: 'Intermediate', order: 1, color: '#6B7280' },
+    { key: 'elite',        label: 'Elite',        order: 2, color: '#374151' },
+    { key: 'professional', label: 'Professional', order: 3, color: '#111827' },
+  ],
+  Kickboxing: [
+    { key: 'white',  label: 'White Belt',  order: 0, color: '#FFFFFF' },
+    { key: 'yellow', label: 'Yellow Belt', order: 1, color: '#FDE047' },
+    { key: 'orange', label: 'Orange Belt', order: 2, color: '#FB923C' },
+    { key: 'green',  label: 'Green Belt',  order: 3, color: '#22C55E' },
+    { key: 'blue',   label: 'Blue Belt',   order: 4, color: '#3B82F6' },
+    { key: 'red',    label: 'Red Belt',    order: 5, color: '#EF4444' },
+    { key: 'black',  label: 'Black Belt',  order: 6, color: '#111827', maxStripes: 5 },
+  ],
+  Wrestling: [
+    { key: 'beginner',     label: 'Beginner',     order: 0, color: '#D1D5DB' },
+    { key: 'intermediate', label: 'Intermediate', order: 1, color: '#6B7280' },
+    { key: 'advanced',     label: 'Advanced',     order: 2, color: '#374151' },
+  ],
+  Other: [
+    { key: 'beginner',     label: 'Beginner',     order: 0, color: '#D1D5DB' },
+    { key: 'intermediate', label: 'Intermediate', order: 1, color: '#6B7280' },
+    { key: 'advanced',     label: 'Advanced',     order: 2, color: '#374151' },
+    { key: 'expert',       label: 'Expert',       order: 3, color: '#111827' },
+  ],
+};
+
+export interface DojoScheduleSlot {
+  day: 0 | 1 | 2 | 3 | 4 | 5 | 6; // 0=Sunday
+  open: string;  // "HH:mm"
+  close: string; // "HH:mm"
+}
+
+// ============================================================================
+// Organization (Network of Dojos)
+// ============================================================================
+
+export interface Organization extends BaseEntity {
+  name: string;
+  description?: string;
+  logo_url?: string;
+  owner_id: string; // network_owner user
+  website?: string;
+  contact_email?: string;
+  dojo_count?: number; // virtual, populated on read
+}
+
+// ============================================================================
 // Base Types - Common patterns reused across interfaces
 // ============================================================================
 
@@ -151,7 +301,7 @@ export interface ApiResponse<T> {
 }
 
 // Auth types
-export type UserRole = 'admin' | 'instructor' | 'student' | 'owner';
+export type UserRole = 'admin' | 'instructor' | 'student' | 'owner' | 'network_owner';
 
 export interface JWTPayload {
   sub: string; // user_id
@@ -178,9 +328,31 @@ export interface User extends BaseEntity {
   stripes: BJJRank['stripes']; // Number of stripes on the belt (0-4, typically 0-3 for colored belts, can extend for black belts)
 }
 
+export interface DojoAddress {
+  street?: string;
+  city?: string;
+  state?: string;
+  country?: string;
+  postal_code?: string;
+  coordinates?: { lat: number; lng: number };
+}
+
 export interface Tenant extends BaseEntity {
   slug: string;
   name: string;
+  // Network layer
+  organization_id?: string;
+  // Dojo details
+  martial_art: MartialArt;
+  description?: string;
+  logo_url?: string;
+  address?: DojoAddress;
+  phone?: string;
+  email?: string;
+  website?: string;
+  schedule?: DojoScheduleSlot[];
+  // Rank system override (if null, uses MARTIAL_ART_RANKS[martial_art])
+  custom_ranks?: RankLevel[];
 }
 
 

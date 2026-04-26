@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { ProtectedRoute } from './components/protected-route';
 import { AdminRoute } from './components/admin-route';
 import { StudentRoute } from './components/student-route';
+import { NetworkOwnerRoute } from './components/network-owner-route';
 import { AuthGuard } from './components/auth/auth-guard';
 import { RouteLoading } from './components/routes/route-loading';
 import { ROUTES } from './lib/routes';
@@ -21,6 +22,13 @@ const PortalPage = lazy(() => import('./pages/portal').then(m => ({ default: m.P
 const RegistrationsPage = lazy(() => import('./pages/registrations').then(m => ({ default: m.RegistrationsPage })));
 const MembershipPlansPage = lazy(() => import('./pages/membership-plans').then(m => ({ default: m.MembershipPlansPage })));
 const PrivateClassesPage = lazy(() => import('./pages/private-classes').then(m => ({ default: m.PrivateClassesPage })));
+
+// Network Owner pages
+const NetworkDashboard = lazy(() => import('./pages/network/network-dashboard'));
+const OrganizationNew = lazy(() => import('./pages/network/organization-new'));
+const OrganizationDetail = lazy(() => import('./pages/network/organization-detail'));
+const DojoNew = lazy(() => import('./pages/network/dojo-new'));
+const DojoEdit = lazy(() => import('./pages/network/dojo-edit'));
 
 /**
  * Wrapper component for lazy-loaded routes with Suspense
@@ -151,6 +159,14 @@ export function AppRoutes() {
           </LazyRoute>
         }
       />
+
+      {/* Network Owner Routes */}
+      <Route path={ROUTES.NETWORK_ROOT} element={<LazyRoute><NetworkOwnerRoute><NetworkDashboard /></NetworkOwnerRoute></LazyRoute>} />
+      <Route path={ROUTES.NETWORK_ORGANIZATION_NEW} element={<LazyRoute><NetworkOwnerRoute><OrganizationNew /></NetworkOwnerRoute></LazyRoute>} />
+      <Route path="/network/organizations/:id" element={<LazyRoute><NetworkOwnerRoute><OrganizationDetail /></NetworkOwnerRoute></LazyRoute>} />
+      <Route path="/network/organizations/:id/edit" element={<LazyRoute><NetworkOwnerRoute><OrganizationDetail /></NetworkOwnerRoute></LazyRoute>} />
+      <Route path="/network/organizations/:orgId/dojos/new" element={<LazyRoute><NetworkOwnerRoute><DojoNew /></NetworkOwnerRoute></LazyRoute>} />
+      <Route path="/network/organizations/:orgId/dojos/:dojoId/edit" element={<LazyRoute><NetworkOwnerRoute><DojoEdit /></NetworkOwnerRoute></LazyRoute>} />
 
       {/* Protected Routes (Any Authenticated User) */}
       <Route

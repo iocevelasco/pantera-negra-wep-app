@@ -24,6 +24,14 @@ export const ROUTES = {
   // Protected routes (any authenticated user)
   SCHEDULE: '/schedule',
   PORTAL: '/portal',
+
+  // Network owner routes
+  NETWORK_ROOT: '/network',
+  NETWORK_ORGANIZATIONS: '/network/organizations',
+  NETWORK_ORGANIZATION_NEW: '/network/organizations/new',
+  NETWORK_ORGANIZATION_DETAIL: (id: string) => `/network/organizations/${id}`,
+  NETWORK_DOJO_NEW: (orgId: string) => `/network/organizations/${orgId}/dojos/new`,
+  NETWORK_DOJO_EDIT: (orgId: string, dojoId: string) => `/network/organizations/${orgId}/dojos/${dojoId}/edit`,
 } as const;
 
 /**

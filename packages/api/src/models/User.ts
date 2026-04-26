@@ -40,7 +40,7 @@ const userSchema = new Schema<UserDocument>(
     tenant_id: { type: Schema.Types.ObjectId, ref: 'Tenant', required: false },
     roles: {
       type: [String],
-      enum: ['admin', 'instructor', 'student', 'owner'],
+      enum: ['admin', 'instructor', 'student', 'owner', 'network_owner'],
       required: true,
       default: () => ['student'],
     },
