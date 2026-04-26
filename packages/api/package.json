@@ -17,6 +17,7 @@
     "seed:sides": "tsx src/scripts/seed-sides.ts",
     "seed:tenants": "tsx src/scripts/seed-tenants.ts",
     "seed:classes": "tsx src/scripts/seed-classes.ts",
+    "seed:demo-dojo": "tsx src/scripts/seed-demo-dojo.ts",
     "create:admin-user": "tsx src/scripts/create-admin-user.ts",
     "update:user-password-hash": "tsx src/scripts/update-user-password-hash.ts",
     "update:user-password": "tsx src/scripts/update-user-password.ts",
