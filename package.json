@@ -7,6 +7,8 @@
     "dev": "pnpm --filter shared build && pnpm --filter web dev & pnpm --filter api dev",
     "dev:web": "pnpm --filter shared build && pnpm --filter web dev",
     "dev:api": "pnpm --filter shared build && pnpm --filter api dev",
+    "dev:landing": "pnpm --filter @pantera-negra/landing dev",
+    "build:landing": "pnpm --filter @pantera-negra/landing build",
     "build": "pnpm --filter shared build && pnpm --filter api build && pnpm --filter web build",
     "build:web": "pnpm --filter shared build && pnpm --filter web build",
     "build:api": "pnpm --filter shared build && pnpm --filter api build",

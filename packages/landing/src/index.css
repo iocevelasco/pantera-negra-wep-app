@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+@theme {
+  /* MatFlow — Japanese Minimalist Palette */
+  --color-black:      #0A0A0A;
+  --color-ink:        #1A1A1A;
+  --color-white:      #FFFFFF;
+  --color-off-white:  #F7F7F5;
+  --color-red:        #EF233C;
+  --color-red-dark:   #C41E30;
+  --color-gray:       #6B7280;
+  --color-gray-light: #9CA3AF;
+  --color-border:     #E5E5E3;
+  --color-border-dark:#2A2A2A;
+
+  /* Typography */
+  --font-serif: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  --font-sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:  'DM Mono', 'Courier New', monospace;
+
+  /* Spacing scale */
+  --spacing-section: 6rem;   /* 96px */
+  --spacing-section-sm: 4rem; /* 64px */
+
+  /* No rounded corners — architectural */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  text-wrap: pretty;
+}
+
+/* Horizontal rule as Japanese design element */
+.rule {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.rule-dark {
+  background-color: var(--color-border-dark);
+}
+
+/* Red accent dot — hanko seal motif */
+.hanko {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-red);
+  border-radius: 50%;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+/* Section label */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+}
+
+/* Feature number */
+.feature-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-red);
+  letter-spacing: 0.05em;
+}
