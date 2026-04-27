@@ -591,7 +591,9 @@
         "emailRequired": "O e-mail é obrigatório",
         "invalidEmail": "Por favor, insira um e-mail válido",
         "failed": "Erro ao solicitar redefinição"
-      }
+      },
+      "backToLogin": "Voltar para o início de sessão",
+      "description": "Insira o seu e-mail para receber um link de redefinição"
     },
     "resetPassword": {
       "title": "Redefinir senha",

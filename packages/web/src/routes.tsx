@@ -11,6 +11,7 @@ import { ROUTES } from './lib/routes';
 // Lazy load pages for better performance and code splitting
 const LoginPage = lazy(() => import('./pages/login').then(m => ({ default: m.LoginPage })));
 const RegisterPage = lazy(() => import('./pages/register').then(m => ({ default: m.RegisterPage })));
+const ForgotPasswordPage = lazy(() => import('./pages/forgot-password').then(m => ({ default: m.ForgotPasswordPage })));
 const ResetPasswordPage = lazy(() => import('./pages/reset-password').then(m => ({ default: m.ResetPasswordPage })));
 const OAuthCallbackPage = lazy(() => import('./pages/oauth-callback').then(m => ({ default: m.OAuthCallbackPage })));
 const RegisterDojoPage = lazy(() => import('./pages/register-dojo').then(m => ({ default: m.RegisterDojoPage })));
@@ -75,6 +76,14 @@ export function AppRoutes() {
         element={
           <LazyRoute>
             <RegisterDojoPage />
+          </LazyRoute>
+        }
+      />
+      <Route
+        path={ROUTES.FORGOT_PASSWORD}
+        element={
+          <LazyRoute>
+            <ForgotPasswordPage />
           </LazyRoute>
         }
       />

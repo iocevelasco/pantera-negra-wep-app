@@ -600,7 +600,9 @@
         "emailRequired": "El email es requerido",
         "invalidEmail": "Por favor ingresa un email válido",
         "failed": "Error al solicitar restablecimiento"
-      }
+      },
+      "backToLogin": "Volver al inicio de sesión",
+      "description": "Ingresa tu email para recibir un enlace de restablecimiento"
     },
     "resetPassword": {
       "title": "Restablecer contraseña",

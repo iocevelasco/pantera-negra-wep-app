@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,6 +13,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useRecaptcha } from "@/hooks/use-recaptcha";
 import { GoogleAuthButton } from "./google-auth-button";
 import { AuthDivider } from "./auth-divider";
+import { ROUTES } from "@/lib/routes";
 
 const loginSchema = z.object({
   email: z
@@ -23,12 +25,9 @@ const loginSchema = z.object({
 
 type LoginFormData = z.infer<typeof loginSchema>;
 
-interface LoginFormProps {
-  onForgotPasswordClick: () => void;
-}
-
-export function LoginFormFields({ onForgotPasswordClick }: LoginFormProps) {
+export function LoginFormFields() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const loginMutation = useLogin();
   const [showPassword, setShowPassword] = useState(false);
   const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
@@ -200,7 +199,7 @@ export function LoginFormFields({ onForgotPasswordClick }: LoginFormProps) {
         <div className="flex items-center justify-between">
           <button
             type="button"
-            onClick={onForgotPasswordClick}
+            onClick={() => navigate(ROUTES.FORGOT_PASSWORD)}
             className="text-sm text-primary hover:underline"
             disabled={isSubmitting || loginMutation.isPending}
           >

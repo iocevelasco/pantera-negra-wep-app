@@ -7,6 +7,7 @@ export const ROUTES = {
   LOGIN: '/login',
   REGISTER: '/register',
   REGISTER_DOJO: '/register-dojo',
+  FORGOT_PASSWORD: '/forgot-password',
   RESET_PASSWORD: '/reset-password',
   OAUTH_CALLBACK: '/oauth/callback',
 
