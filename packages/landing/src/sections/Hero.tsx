@@ -54,39 +54,33 @@ export function Hero() {
           </div>
         </div>
 
-        {/* App screenshots — real dashboard */}
-        <div className="mt-16 max-w-4xl relative">
-          {/* Main screenshot */}
-          <div className="border border-[#2A2A2A] overflow-hidden shadow-2xl" style={{ borderRadius: '4px' }}>
+        {/* App demo screenshot */}
+        <div className="mt-16 max-w-5xl relative">
+          {/* Browser chrome */}
+          <div className="border border-[#2A2A2A] overflow-hidden shadow-2xl" style={{ borderRadius: '6px' }}>
             <div className="bg-[#1A1A1A] px-4 py-2.5 flex items-center gap-2 border-b border-[#2A2A2A]">
               <span className="w-3 h-3 rounded-full bg-[#EF233C] opacity-70" />
               <span className="w-3 h-3 rounded-full bg-[#F59E0B] opacity-70" />
               <span className="w-3 h-3 rounded-full bg-[#22C55E] opacity-70" />
-              <span className="ml-3 text-xs text-[#4B5563] font-mono">pantera-negra-app.fly.dev</span>
+              <div className="ml-4 flex-1 max-w-xs bg-[#111111] rounded px-3 py-1 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#22C55E] opacity-60 shrink-0" />
+                <span className="text-xs text-[#4B5563] font-mono truncate">matflow — Panel de Control</span>
+              </div>
             </div>
             <img
-              src="/screenshot-dashboard.png"
-              alt="Panel de membresías de Pantera Negra BJJ en MatFlow"
+              src="/screenshot-demo.png"
+              alt="Panel de control de MatFlow — ingresos, alumnos activos, asistencia mensual y retención"
               className="w-full block"
               loading="eager"
             />
           </div>
 
-          {/* Floating panel screenshot */}
-          <div
-            className="absolute -bottom-6 -right-6 w-64 border border-[#2A2A2A] overflow-hidden shadow-2xl hidden lg:block"
-            style={{ borderRadius: '4px' }}
-          >
-            <div className="bg-[#1A1A1A] px-3 py-1.5 flex items-center gap-1.5 border-b border-[#2A2A2A]">
-              <span className="w-2 h-2 rounded-full bg-[#EF233C] opacity-70" />
-              <span className="text-[10px] text-[#4B5563] font-mono">Dashboard</span>
-            </div>
-            <img
-              src="/screenshot-panel.png"
-              alt="Estadísticas del dashboard de MatFlow"
-              className="w-full block"
-              loading="eager"
-            />
+          {/* Stats callout badges */}
+          <div className="absolute -top-4 -right-4 bg-[#EF233C] text-white text-xs font-mono px-3 py-1.5 hidden lg:block" style={{ borderRadius: '2px' }}>
+            75% retención
+          </div>
+          <div className="absolute -bottom-4 left-8 bg-[#111111] border border-[#2A2A2A] text-[#9CA3AF] text-xs font-mono px-3 py-1.5 hidden lg:block" style={{ borderRadius: '2px' }}>
+            +110 asistencias este mes
           </div>
         </div>
       </div>
