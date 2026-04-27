@@ -31,6 +31,7 @@ export function LoginFormFields({ onForgotPasswordClick }: LoginFormProps) {
   const { t } = useTranslation();
   const loginMutation = useLogin();
   const [showPassword, setShowPassword] = useState(false);
+  const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
   const { executeRecaptchaAction } = useRecaptcha();
 
   const {
@@ -43,20 +44,17 @@ export function LoginFormFields({ onForgotPasswordClick }: LoginFormProps) {
   });
 
   const onSubmit = async (data: LoginFormData) => {
+    setRecaptchaError(null);
     try {
-      // Execute reCAPTCHA before submitting (returns empty string in development)
       const recaptchaToken = await executeRecaptchaAction("login");
-      // In development, token can be empty - backend will handle it
       loginMutation.mutate({ ...data, recaptchaToken });
     } catch (error) {
       console.error("Failed to execute reCAPTCHA:", error);
-      // Only show error in production where reCAPTCHA is required
       const isProduction = import.meta.env.MODE === "production";
       if (isProduction) {
-        // In production, reCAPTCHA is required
+        setRecaptchaError(t("auth.login.errors.recaptchaError"));
         return;
       }
-      // In development, continue without token
       loginMutation.mutate({ ...data, recaptchaToken: "" });
     }
   };
@@ -67,13 +65,15 @@ export function LoginFormFields({ onForgotPasswordClick }: LoginFormProps) {
 
   return (
     <div className="space-y-6">
-      {loginMutation.isError && (
+      {(loginMutation.isError || recaptchaError) && (
         <Alert variant="destructive" role="alert" aria-live="assertive">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>
-            {loginMutation.error instanceof Error
-              ? loginMutation.error.message
-              : t("auth.login.errors.loginFailed")}
+            {recaptchaError
+              ? recaptchaError
+              : loginMutation.error instanceof Error
+                ? loginMutation.error.message
+                : t("auth.login.errors.loginFailed")}
           </AlertDescription>
         </Alert>
       )}

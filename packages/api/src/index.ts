@@ -104,7 +104,20 @@ app.options('*', (req, res) => {
 // Security headers
 app.use(helmet({
   crossOriginEmbedderPolicy: false, // Needed for Cloudinary image loading
-  contentSecurityPolicy: isProduction ? undefined : false,
+  contentSecurityPolicy: isProduction ? {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://www.google.com", "https://www.gstatic.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "blob:", "https://res.cloudinary.com", "https://www.google.com", "https://www.gstatic.com"],
+      frameSrc: ["'self'", "https://www.google.com", "https://www.gstatic.com"],
+      connectSrc: ["'self'", "https://www.google.com", "https://www.gstatic.com"],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"],
+      formAction: ["'self'"],
+    },
+  } : false,
 }));
 
 // Gzip compression
